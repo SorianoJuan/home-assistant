@@ -54,4 +54,4 @@
   scan_interval: 30
   default_branch: master
   repository_names:
-    - HomeAssistant
+    - home-assistant
