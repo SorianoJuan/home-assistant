@@ -52,5 +52,5 @@ sensor.speedtest_download:
 sensor.speedtest_ping:
   friendly_name: Ping
 sensor.speedtest_upload:
-  friendly_name: Upload git la concha de tu hermana
+  friendly_name: Upload git la concha
 ######
