@@ -1,0 +1,119 @@
+############
+#Views
+############
+
+nodos_view:
+  view: yes
+  name: Nodos
+  entities:
+    - group.node_mcu
+
+familia_view:
+  view: yes
+  name: Familia
+  entities:
+    - group.gente
+
+rb3_status_view:
+  view: yes
+  name: Status
+  entities:
+    - group.rb3_hardware
+    - group.speedtest
+    - group.travis
+
+tiempo_pronostico_view:
+  view: yes
+  name: Tiempo 
+  entities:
+    - group.date_time
+    - group.sun
+    - group.pronostico
+
+
+automation_view:
+  name: Automation
+  view: yes
+  entities:
+    - group.all_automations
+    - group.all_scripts
+
+
+
+##############
+#Groups
+##############
+
+node_mcu:
+  name: NodeMCU
+  entities:
+    - device_tracker.nodemcu
+    - sensor.humedad
+    - sensor.temperatura
+
+esp8266:
+  name: esp8266
+
+gente:
+  name: Familia
+  entities:
+    - device_tracker.torce_torce
+
+#Speedtest
+speedtest:
+  name: Conexion
+  entities:
+    - sensor.ipv4_address_wlan0
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+
+#Hardware RB3
+rb3_hardware:
+  name: RB3 Hardware
+  entities:
+    - sensor.cpu_used
+    - sensor.ram_available
+    - sensor.disk_free_home
+    - sensor.last_boot
+
+#Pronostico
+pronostico:
+  name: Pronostico
+  entities:
+    - sensor.pronostico_symbol
+    - sensor.pronostico_temperature
+    - sensor.pronostico_dewpoint_temperature
+    - sensor.pronostico_humidity
+    - sensor.pronostico_pressure
+    - sensor.pronostico_precipitation
+    - sensor.pronostico_cloudiness
+    - sensor.pronostico_low_clouds
+    - sensor.pronostico_medium_clouds
+    - sensor.pronostico_high_clouds
+    - sensor.pronostico_wind_speed
+    - sensor.pronostico_wind_direction
+    - sensor.pronostico_fog
+
+#Sun
+sun:
+  name: Sol
+  entities: 
+    - sun.sun
+
+#Date and time
+date_time:
+  name: Date and Time
+  entities:
+    - sensor.date__time
+
+#Repositorio
+travis:
+  name: Travis-CI
+  entities:
+    - sensor.sorianojuanhomeassistant_last_build_duration
+    - sensor.sorianojuanhomeassistant_last_build_finished_at
+    - sensor.sorianojuanhomeassistant_last_build_id
+    - sensor.sorianojuanhomeassistant_last_build_started_at
+    - sensor.sorianojuanhomeassistant_last_build_state
+    - sensor.sorianojuanhomeassistant_state

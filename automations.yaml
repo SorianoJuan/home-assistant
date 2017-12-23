@@ -1,0 +1,55 @@
+- id: homeassistant_on
+  alias: Home Assistant On
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    service: notify.mypushbullet
+    data_template:
+      title: "Home Assistant ONLINE"
+      message: "Home Assistant ha iniciado"
+
+- id: homeassistant_off
+  alias: Home Assistant Off
+  trigger:
+    - platform: homeassistant
+      event: shutdown
+  action:
+    service: notify.mypushbullet
+    data_template:
+      title: "Home assistant OFFLINE"
+      message: "Home Assistant se ha detenido"
+
+- id: humedad
+  alias: Humedad
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.humedad
+    above: 80
+  action:
+    service: notify.mypushbullet
+    data_template:
+      title: "La humedad paso el 80%"
+      message: "La humedad es: {{ states.sensor.humedad.state }}%"
+
+- id: travis_automation
+  alias: 'Update if Travis=passed'
+  trigger:
+    platform: state
+    entity_id: sensor.sorianojuanhomeassistant_last_build_state
+    to: 'passed'
+  action:
+    - service: script.update_config
+
+
+#- id: nodemcu_online
+#  alias: NodeMCU online
+#  trigger:
+#    platform: mqtt
+#    topic: status/nodemcu
+#    payload: online
+#  action:
+#    service: notify.mypushbullet
+#    data_template:
+#      title: "NodeMCU online"
+#      message: "Se conecto el NodeMCU"

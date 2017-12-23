@@ -1,0 +1,56 @@
+#General
+group.all_automations:
+  hidden: false
+group.all_scripts:
+  hidden: false
+#Pronostico
+sensor.pronostico_cloudiness:
+  friendly_name: Nubosidad
+sensor.pronostico_dewpoint_temperature:
+  friendly_name: Sens térmica
+sensor.pronostico_fog:
+  friendly_name: Niebla
+sensor.pronostico_high_clouds:
+  friendly_name: Nubes altas
+sensor.pronostico_humidity:
+  friendly_name: Humedad
+sensor.pronostico_low_clouds:
+  friendly_name: Nubes bajas
+sensor.pronostico_medium_clouds:
+  friendly_name: Nubes medias
+sensor.pronostico_precipitation:
+  friendly_name: Precipitación
+sensor.pronostico_pressure:
+  friendly_name: Presión
+sensor.pronostico_symbol:
+  friendly_name: Pronóstico
+sensor.pronostico_temperature:
+  friendly_name: Temperatura
+sensor.pronostico_wind_direction:
+  friendly_name: Dirección del viento
+sensor.pronostico_wind_speed:
+  friendly_name: Velocidad del viento
+#Travis-CI
+sensor.sorianojuanhomeassistant_last_build_duration:
+  friendly_name: Duración del último build
+  hidden: true
+sensor.sorianojuanhomeassistant_last_build_finished_at:
+  friendly_name: Último build
+sensor.sorianojuanhomeassistant_last_build_id:
+  friendly_name: ID del último build
+  hidden: true
+sensor.sorianojuanhomeassistant_last_build_started_at:
+  friendly_name: Último build empezado a
+  hidden: true
+sensor.sorianojuanhomeassistant_last_build_state:
+  friendly_name: Estado del último build
+sensor.sorianojuanhomeassistant_state:
+  friendly_name: Estado
+#Speedtest
+sensor.speedtest_download:
+  friendly_name: Download
+sensor.speedtest_ping:
+  friendly_name: Ping
+sensor.speedtest_upload:
+  friendly_name: Upload
+##

@@ -1,0 +1,57 @@
+#sensor: Forecast
+- platform: yr
+  name: Pronostico
+  forecast: 24
+  monitored_conditions:
+    - temperature
+    - symbol
+    - precipitation
+    - windSpeed
+    - pressure
+    - windDirection
+    - humidity
+    - fog
+    - cloudiness
+    - lowClouds
+    - mediumClouds
+    - highClouds
+    - dewpointTemperature
+#sensor 2: 
+- platform: time_date
+  display_options:
+    - "date_time"
+#sensor 3:
+- platform: systemmonitor
+  resources:
+    - type: disk_free
+      arg: /home
+    - type: memory_free
+    - type: processor_use
+    - type: last_boot
+    - type: ipv4_address
+      arg: wlan0
+#sensor 4: Speedtest
+- platform: speedtest
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+#sensor 5: Temperatura
+- platform: mqtt
+  name: "Temperatura"
+  state_topic: "sensor/temperature"
+  qos: 0
+  unit_of_measurement: "°C"
+#sensor 6: Humedad
+- platform: mqtt
+  name: "Humedad"
+  state_topic: "sensor/humidity"
+  qos: 0
+  unit_of_measurement: "%"
+#sensor 7: Travis
+- platform: travisci
+  api_key: !secret travis_token
+  scan_interval: 30
+  default_branch: master
+  repository_names:
+    - HomeAssistant

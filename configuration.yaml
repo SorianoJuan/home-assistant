@@ -1,0 +1,85 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitud_brc
+  longitude: !secret longitud_brc
+  elevation: 850
+  unit_system: metric
+  time_zone: America/Buenos_Aires
+  customize: !include customize.yaml
+
+zone:
+  name: Centro
+  latitude: !secret latitud_centro
+  longitude: !secret longitud_centro
+  radius: 250
+  icon: mdi:worker
+
+
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  username: !secret mqtt_user
+  password: !secret mqtt_password
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret http_password
+  #ssl_certificate: !secret ssl_path
+  #ssl_key: !secret ssl_key
+
+
+#############################
+#         INCLUDES
+#############################
+
+
+alarm_control_panel: !include alarm_control_panel.yaml
+alexa: !include alexa.yaml
+automation: !include automations.yaml
+binary_sensor: !include binary_sensors.yaml
+camera: !include cameras.yaml
+device_tracker: !include device_trackers.yaml
+group: !include groups.yaml
+#input_select: !include input_select.yaml
+light: !include lights.yaml
+media_player: !include media_players.yaml
+notify: !include notify.yaml
+scene: !include scenes.yaml
+script: !include scripts.yaml
+sensor: !include sensors.yaml
+shell_command: !include shell_commands.yaml
+switch: !include switches.yaml
+
+
+#############################
+#         ENABLES
+#############################
+
+logger:
+# Enables the frontend
+frontend:
+# Enables configuration UI
+config:
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+# Discover some devices automatically
+discovery:
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+# Enables support for tracking state changes over time
+history:
+# View all events in a logbook
+logbook:
+# Enables a map showing the location of tracked devices
+map:
+# Track the sun
+sun:
+# Text to speech
+tts:
+  - platform: google
