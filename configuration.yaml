@@ -83,3 +83,26 @@ sun:
 # Text to speech
 tts:
   - platform: google
+
+# Example configuration.yaml entry
+android_ip_webcam:
+  - host: 192.168.4.2
+    port: 8000
+    sensors:
+      - audio_connections
+      - battery_level
+      - battery_temp
+      - battery_voltage
+      - light
+      - motion
+      - pressure
+    switches:
+      - exposure_lock
+      - ffc
+      - focus
+      - gps_active
+      - night_vision
+      - overlay
+      - torch
+      - whitebalance_lock
+      - video_recording
