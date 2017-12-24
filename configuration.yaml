@@ -115,12 +115,11 @@ history_graph:
     name: Temperature
     entities:
       - sensor.temperatura
-      - sensor.humedad
     hours_to_show: 24
     refresh: 60
-#  gr2:
-#    name: Humidity
-#    entities:
-#      - sensor.humedad
-#    hours_to_show: 24
-#    refresh: 120
+  gr2:
+    name: Humidity
+    entities:
+      - sensor.humedad
+    hours_to_show: 24
+    refresh: 120
