@@ -53,8 +53,10 @@ node_mcu:
   name: NodeMCU
   entities:
     - device_tracker.nodemcu
-    - sensor.humedad
     - sensor.temperatura
+    - sensor.history_graph.temperature
+    - sensor.humedad
+    - history_graph.humidity
 
 esp8266:
   name: esp8266

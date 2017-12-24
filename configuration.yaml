@@ -116,10 +116,10 @@ history_graph:
     entities:
       - sensor.temperatura
     hours_to_show: 72
-    refresh: 60
+    refresh: 120
   gr2:
     name: Humidity
     entities:
       - sensor.humedad
     hours_to_show: 24
-    refresh: 60
+    refresh: 120
