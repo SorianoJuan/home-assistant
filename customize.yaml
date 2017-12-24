@@ -16,10 +16,13 @@ sensor.pronostico_humidity:
   friendly_name: Humedad
 sensor.pronostico_low_clouds:
   friendly_name: Nubes bajas
+  hidden: true
 sensor.pronostico_medium_clouds:
   friendly_name: Nubes medias
+  hidden: true
 sensor.pronostico_precipitation:
   friendly_name: Precipitación
+  hidden: true
 sensor.pronostico_pressure:
   friendly_name: Presión
 sensor.pronostico_symbol:
