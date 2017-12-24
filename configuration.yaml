@@ -87,7 +87,9 @@ tts:
 # Example configuration.yaml entry
 android_ip_webcam:
   - host: 192.168.4.2
-    port: 8000
+    port: 8080
+    username: !include android_ip_webcam_username
+    password: !include android_ip_webcam_password
     sensors:
       - audio_connections
       - battery_level
