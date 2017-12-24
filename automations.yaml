@@ -34,7 +34,7 @@
     - service: mqtt.publish
       data:
         topic: "sensor/led"
-        payload: "on"
+        payload: "1"
 
 - id: travis_automation
   alias: 'Update if Travis=passed'
