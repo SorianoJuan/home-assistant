@@ -27,10 +27,14 @@
     entity_id: sensor.humedad
     above: 80
   action:
-    service: notify.mypushbullet
-    data_template:
-      title: "La humedad paso el 80%"
-      message: "La humedad es: {{ states.sensor.humedad.state }}%"
+    - service: notify.mypushbullet
+      data_template:
+        title: "La humedad paso el 80%"
+        message: "La humedad es: {{ states.sensor.humedad.state }}%"
+    - service: mqtt.publish
+      data:
+        topic: "sensor/led"
+        payload: "on"
 
 - id: travis_automation
   alias: 'Update if Travis=passed'
