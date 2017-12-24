@@ -146,3 +146,10 @@ ipcam:
     - switch.ip_webcam_torch
     - switch.ip_webcam_video_recording
     - switch.ip_webcam_white_balance_lock
+    - sensor.ip_webcam_audio_connections
+    - sensor.ip_webcam_battery_level
+    - sensor.ip_webcam_battery_temperature
+    - sensor.ip_webcam_battery_voltage
+    - sensor.ip_webcam_light_level
+    - sensor.ip_webcam_motion
+    - sensor.ip_webcam_pressure
