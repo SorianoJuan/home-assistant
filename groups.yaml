@@ -54,7 +54,7 @@ node_mcu:
   entities:
     - device_tracker.nodemcu
     - sensor.temperatura
-    - sensor.history_graph.temperature
+    - history_graph.temperature
     - sensor.humedad
     - history_graph.humidity
 
