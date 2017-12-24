@@ -122,6 +122,7 @@ travis:
 ipcam:
   name: Android IP Cam
   entities:
+    - camera.ip_webcam
     - switch.ip_webcam_exposure_lock
     - switch.ip_webcam_focus
     - switch.ip_webcam_frontfacing_camera
