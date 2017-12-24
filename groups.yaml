@@ -63,8 +63,8 @@ gente:
   name: Familia
   entities:
     - device_tracker.torce_torce
-    - device_tracker.dell home
-    - device_tracker.esprepeater  home
+    - device_tracker.dell
+    - device_tracker.esprepeater
 
 #Speedtest
 speedtest:
