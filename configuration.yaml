@@ -112,17 +112,17 @@ android_ip_webcam:
 # Grafico temperatura y humedad
 history_graph:
   #Temperatura ambiente
-  #gr1:
-  #  name: Temperatura ambiente
-  #  entities:
-      #- sensor.temperatura
-  #  hours_to_show: 24
-  #  refresh: 60
+  gr1:
+    name: Temperatura ambiente
+    entities:
+      - sensor.temperatura_ambiente
+    hours_to_show: 24
+    refresh: 60
   #Humedad ambiente
   #gr2:
-  #  name: Humedad ambiente
-  #  entities:
-      #- sensor.humedad
-  #  hours_to_show: 24
-  #  refresh: 120
+    name: Humedad ambiente
+    entities:
+      - sensor.humedad_ambiente
+    hours_to_show: 24
+    refresh: 120
   #

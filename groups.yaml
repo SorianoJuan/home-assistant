@@ -8,6 +8,10 @@ invernadero_view:
   entities:
     - sensor.temperatura_ambiente
     - sensor.humedad_ambiente
+    - group.bombas
+    - group.estufas
+    - group.ventanas
+    - group.ventiladores
 
 planta_1_view:
   view: yes
@@ -66,10 +70,10 @@ invernadero:
   name: Invernadero
   entities:
     - device_tracker.nodemcu
-    - sensor.temperatura
-    - history_graph.temperature
-    - sensor.humedad
-    - history_graph.humidity
+    - sensor.temperatura_ambiente
+    #- history_graph.temperature
+    - sensor.humedad_ambiente
+    #- history_graph.humidity
 
 ventanas:
   name: Ventanas
