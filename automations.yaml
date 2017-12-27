@@ -6,8 +6,8 @@
   action:
     service: notify.mypushbullet
     data_template:
-      title: "Home Assistant ONLINE"
-      message: "Home Assistant ha iniciado"
+      title: "Control de hidroponia ONLINE"
+      message: "Se ha iniciado el control de hidroponia"
 
 - id: homeassistant_off
   alias: Home Assistant Off
@@ -17,11 +17,11 @@
   action:
     service: notify.mypushbullet
     data_template:
-      title: "Home assistant OFFLINE"
-      message: "Home Assistant se ha detenido"
+      title: "Control de hidroponia OFFLINE"
+      message: "Se ha detenido el control de hidroponia"
 
 - id: humedad
-  alias: Humedad
+  alias: Humedad ambiente
   trigger:
     platform: numeric_state
     entity_id: sensor.humedad
@@ -29,8 +29,8 @@
   action:
     - service: notify.mypushbullet
       data_template:
-        title: "La humedad paso el 80%"
-        message: "La humedad es: {{ states.sensor.humedad.state }}%"
+        title: "La humedad ambiente superó el 80%"
+        message: "La humedad ambiente es de: {{ states.sensor.humedad.state }}%"
     - service: mqtt.publish
       data:
         topic: "sensor/led"

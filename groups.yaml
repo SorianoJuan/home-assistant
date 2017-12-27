@@ -16,7 +16,19 @@ planta_3:
   view: yes
   name: Planta 3
   entities:
-    
+
+control_view:
+  name: Control
+  entities:
+
+tiempo_pronostico_view:
+  view: yes
+  name: Tiempo y pronóstico
+  entities:
+    - group.date_time
+    - group.sun
+    - group.pronostico
+
 rb3_status_view:
   view: yes
   name: Status
@@ -25,33 +37,20 @@ rb3_status_view:
     - group.speedtest
     - group.travis
 
-tiempo_pronostico_view:
-  view: yes
-  name: Tiempo 
-  entities:
-    - group.date_time
-    - group.sun
-    - group.pronostico
-
 automation_view:
-  name: Automation
+  name: Automatización
   view: yes
   entities:
     - group.all_automations
-    - group.all_scripts
-
-control_view:
-  name: Control
-  entities:
-    
+    - group.all_scripts    
 
 
 ##############
 #Groups
 ##############
 
-node_mcu:
-  name: NodeMCU
+invernadero:
+  name: Invernadero
   entities:
     - device_tracker.nodemcu
     - sensor.temperatura

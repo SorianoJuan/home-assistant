@@ -1,0 +1,130 @@
+##############
+#Humidificador
+##############
+- name: Humidificador ambiente
+  platform: mqtt
+  command_topic: invernadero/humidificador/onoff
+  availability_topic: invernadero/humidificador/estado
+  payload_on: "on"
+  payload_off: "off"
+  payload_available: "online"
+  payload_not_available: "offline"
+  optimistic: "true"
+  retain: true
+##############
+#Estufas
+##############
+- name: Estufa 1
+  platform: mqtt
+  command_topic: invernadero/estufa1/onoff
+  availability_topic: invernadero/estufa1/estado
+  payload_on: "on"
+  payload_off: "off"
+  payload_available: "online"
+  payload_not_available: "offline"
+  optimistic: "true"
+  retain: true
+##############
+#Ventiladores
+##############
+- name: Ventilador 1
+  platform: mqtt
+  command_topic: invernadero/ventilador1/onoff
+  availability_topic: invernadero/ventilador1/estado
+  payload_on: "on"
+  payload_off: "off"
+  payload_available: "online"
+  payload_not_available: "offline"
+  optimistic: "true"
+  retain: true
+###########
+#Ventanas
+###########
+#Ventana 1
+- name: Ventana 1 
+  platform: mqtt
+  command_topic: invernadero/ventana1/onoff
+  availability_topic: invernadero/ventana1/estado
+  payload_on: "on"
+  payload_off: "off"
+  payload_available: "online"
+  payload_not_available: "offline"
+  optimistic: "true"
+  retain: true
+#Ventana 2
+- name: Ventana 2
+  platform: mqtt
+  command_topic: invernadero/ventana2/onoff
+  availability_topic: invernadero/ventana2/estado
+  payload_on: "on"
+  payload_off: "off"
+  payload_available: "online"
+  payload_not_available: "offline"
+  optimistic: "true"
+  retain: true
+#Ventana 3
+- name: Ventana 3
+  platform: mqtt
+  command_topic: invernadero/ventana3/onoff
+  availability_topic: invernadero/ventana3/estado
+  payload_on: "on"
+  payload_off: "off"
+  payload_available: "online"
+  payload_not_available: "offline"
+  optimistic: "true"
+  retain: true
+#Ventana 4
+- name: Ventana 4
+  platform: mqtt
+  command_topic: invernadero/ventana4/onoff
+  availability_topic: invernadero/ventana4/estado
+  payload_on: "on"
+  payload_off: "off"
+  payload_available: "online"
+  payload_not_available: "offline"
+  optimistic: "true"
+  retain: true
+##############
+#Bombas
+##############
+#Bomba 1
+- name: Bomba 1
+  platform: mqtt
+  command_topic: invernadero/bomba1/onoff
+  availability_topic: invernadero/bomba1/estado
+  payload_on: "on"
+  payload_off: "off"
+  payload_available: "online"
+  payload_not_available: "offline"
+  optimistic: "true"
+  retain: true
+#Bomba 2
+- name: Bomba 2
+  platform: mqtt
+  command_topic: invernadero/bomba2/onoff
+  availability_topic: invernadero/bomba2/estado
+  payload_on: "on"
+  payload_off: "off"
+  payload_available: "online"
+  payload_not_available: "offline"
+  optimistic: "true"
+  retain: true
+
+
+
+#MQTT SWITCHES
+
+#Configuration variables:
+
+#name (Optional): The name of the switch. Default is ‘MQTT Switch’.
+#state_topic (Optional): The MQTT topic subscribed to receive state updates.
+#command_topic (Required): The MQTT topic to publish commands to change the switch state.
+#availability_topic (Optional): The MQTT topic subscribed to receive availability (online/offline) updates.
+#payload_on (Optional): The payload that represents enabled state. Default is “ON”.
+#payload_off (Optional): The payload that represents disabled state. Default is “OFF”.
+#payload_available (Optional): The payload that represents the available state, e.g. ‘online’. Default is “ON”.
+#payload_not_available (Optional): The payload that represents the unavailable state, e.g. ‘offline’. Default is “OFF”.
+#optimistic (Optional): Flag that defines if switch works in optimistic mode. Default is true if no state_topic defined, else false.
+#qos (Optional): The maximum QoS level of the state topic. Default is 0 and will also be used to publishing messages.
+#retain (Optional): If the published message should have the retain flag on or not.
+#value_template (Optional): Defines a template to extract a value from the payload.

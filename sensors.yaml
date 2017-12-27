@@ -38,13 +38,13 @@
     - upload
 #sensor 5: Temperatura
 - platform: mqtt
-  name: "Temperatura"
+  name: "Temperatura ambiente"
   state_topic: "sensor/temperature"
   qos: 0
   unit_of_measurement: "°C"
 #sensor 6: Humedad
 - platform: mqtt
-  name: "Humedad"
+  name: "Humedad ambiente"
   state_topic: "sensor/humidity"
   qos: 0
   unit_of_measurement: "%"
@@ -55,3 +55,49 @@
   default_branch: hidroponia
   repository_names:
     - home-assistant
+
+#############
+# PLANTA 1
+#############
+#sensor 8: Temperatura
+- platform: mqtt
+  name: "pH - planta 1"
+  state_topic: "planta1/sensor/ph"
+  qos: 0
+  unit_of_measurement:
+#sensor 9: Humedad
+- platform: mqtt
+  name: "Conductividad eléctrica - planta 2"
+  state_topic: "planta1/sensor/ec"
+  qos: 0
+  unit_of_measurement: "Siemens"
+#############
+# PLANTA 2
+#############
+#sensor 5: Temperatura
+- platform: mqtt
+  name: "pH - planta 2"
+  state_topic: "planta2/sensor/ph"
+  qos: 0
+  unit_of_measurement:
+#sensor 6: Humedad
+- platform: mqtt
+  name: "Conductividad eléctrica - planta 2"
+  state_topic: "planta2/sensor/ec"
+  qos: 0
+  unit_of_measurement: "Siemens"
+#############
+# PLANTA 3
+#############
+  #sensor 5: Temperatura
+- platform: mqtt
+  name: "pH - planta 3"
+  state_topic: "planta3/sensor/ph"
+  qos: 0
+  unit_of_measurement:
+#sensor 6: Humedad
+- platform: mqtt
+  name: "Conductividad eléctrica - planta 3"
+  state_topic: "planta3/sensor/ec"
+  qos: 0
+  unit_of_measurement: "Siemens"
