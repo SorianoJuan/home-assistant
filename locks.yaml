@@ -1,2 +1,2 @@
-- platform: mqtt
-    command_topic: "home/frontdoor/set"
+  - platform: mqtt
+      command_topic: "home/frontdoor/set"
