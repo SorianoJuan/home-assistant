@@ -119,10 +119,9 @@ history_graph:
     hours_to_show: 24
     refresh: 60
   #Humedad ambiente
-  #gr2:
+  gr2:
     name: Humedad ambiente
     entities:
       - sensor.humedad_ambiente
     hours_to_show: 24
     refresh: 120
-  #
