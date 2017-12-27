@@ -71,7 +71,7 @@ updater:
 # Discover some devices automatically
 discovery:
 # Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
+#conversation:
 # Enables support for tracking state changes over time
 history:
 # View all events in a logbook
@@ -81,33 +81,33 @@ map:
 # Track the sun
 sun:
 # Text to speech
-tts:
-  - platform: google
+#tts:
+#  - platform: google
 
 # Example configuration.yaml entry
-android_ip_webcam:
-  - host: 192.168.4.2
-    port: 8080
-    username: !secret android_ip_webcam_username
-    password: !secret android_ip_webcam_password
-    sensors:
-      - audio_connections
-      - battery_level
-      - battery_temp
-      - battery_voltage
-      - light
-      - motion
-      - pressure
-    switches:
-      - exposure_lock
-      - ffc
-      - focus
-      - gps_active
-      - night_vision
-      - overlay
-      - torch
-      - whitebalance_lock
-      - video_recording
+#android_ip_webcam:
+#  - host: 192.168.4.2
+#    port: 8080
+#    username: !secret android_ip_webcam_username
+#    password: !secret android_ip_webcam_password
+#    sensors:
+#      - audio_connections
+#      - battery_level
+#      - battery_temp
+#      - battery_voltage
+#      - light
+#      - motion
+#      - pressure
+#    switches:
+#      - exposure_lock
+#      - ffc
+#      - focus
+#      - gps_active
+#      - night_vision
+#      - overlay
+#      - torch
+#      - whitebalance_lock
+#      - video_recording
 
 # Grafico temperatura y humedad
 history_graph:

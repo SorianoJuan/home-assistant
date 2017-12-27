@@ -67,6 +67,7 @@ automation_view:
 ######################
 sensores_invernadero:
   name: Sensores invernadero
+  entities:
     - sensor.temperatura_ambiente
     - sensor.humedad_ambiente
     - history_graph.humedad_ambiente
@@ -100,17 +101,20 @@ ventiladores:
 ######################
 
 sensores_planta1:
-  name: Sensores planta 1
+  name: Sensores Planta 1
+    entities:
     - sensor.ph__planta_1
     - sensor.conductividad_electrica__planta_1
 
 sensores_planta2:
   name: Sensores planta 2
+  entities:
     - sensor.ph__planta_2
     - sensor.conductividad_electrica__planta_2
 
 sensores_planta3:
   name: Sensores planta 3
+  entities:
     - sensor.ph__planta_3
     - sensor.conductividad_electrica__planta_3 
 
