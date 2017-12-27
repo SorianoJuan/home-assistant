@@ -54,8 +54,8 @@
   availability_topic: invernadero/ventana1/switch/available
   payload_on: "on"
   payload_off: "off"
-  payload_available: "on"
-  payload_not_available: "off"
+  payload_available: "online"
+  payload_not_available: "offline"
   optimistic: false
   qos: 1
   retain: true
