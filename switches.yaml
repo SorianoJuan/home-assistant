@@ -3,39 +3,45 @@
 ##############
 - name: Humidificador ambiente
   platform: mqtt
-  command_topic: invernadero/humidificador/switch/onoff
-  availability_topic: invernadero/humidificador/switch/estado
+  state_topic: invernadero/humidificador/switch/state
+  command_topic: invernadero/humidificador/switch/set
+  availability_topic: invernadero/humidificador/switch/available
   payload_on: "on"
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
   optimistic: false
+  qos: 1
   retain: true
 ##############
 #Estufas
 ##############
 - name: Estufa 1
   platform: mqtt
-  command_topic: invernadero/estufa1/switch/onoff
-  availability_topic: invernadero/estufa1/switch/estado
+  state_topic: invernadero/estufa1/switch/state
+  command_topic: invernadero/estufa1/switch/set
+  availability_topic: invernadero/estufa1/switch/available
   payload_on: "on"
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
   optimistic: false
+  qos: 1
   retain: true
 ##############
 #Ventiladores
 ##############
 - name: Ventilador 1
   platform: mqtt
-  command_topic: invernadero/ventilador1/switch/onoff
-  availability_topic: invernadero/ventilador1/switch/estado
+  state_topic: invernadero/ventilador1/switch/state
+  command_topic: invernadero/ventilador1/switch/set
+  availability_topic: invernadero/ventilador1/switch/available
   payload_on: "on"
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
   optimistic: false
+  qos: 1
   retain: true
 ###########
 #Ventanas
@@ -43,46 +49,54 @@
 #Ventana 1
 - name: Ventana 1 
   platform: mqtt
-  command_topic: invernadero/ventana1/switch/onoff
-  availability_topic: invernadero/ventana1/switch/estado
+  state_topic: invernadero/ventana1/switch/state
+  command_topic: invernadero/ventana1/switch/set
+  availability_topic: invernadero/ventana1/switch/available
   payload_on: "on"
   payload_off: "off"
   payload_available: "on"
   payload_not_available: "off"
   optimistic: false
+  qos: 1
   retain: true
 #Ventana 2
 - name: Ventana 2
   platform: mqtt
-  command_topic: invernadero/ventana2/switch/onoff
-  availability_topic: invernadero/ventana2/switch/estado
+  state_topic: invernadero/ventana2/switch/state
+  command_topic: invernadero/ventana2/switch/set
+  availability_topic: invernadero/ventana2/switch/available
   payload_on: "on"
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
   optimistic: false
+  qos: 1
   retain: true
 #Ventana 3
 - name: Ventana 3
   platform: mqtt
-  command_topic: invernadero/ventana3/switch/onoff
-  availability_topic: invernadero/ventana3/switch/estado
+  state_topic: invernadero/ventana3/switch/state
+  command_topic: invernadero/ventana3/switch/set
+  availability_topic: invernadero/ventana3/switch/available
   payload_on: "on"
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
   optimistic: false
+  qos: 1
   retain: true
 #Ventana 4
 - name: Ventana 4
   platform: mqtt
-  command_topic: invernadero/ventana4/switch/onoff
-  availability_topic: invernadero/ventana4/switch/estado
+  state_topic: invernadero/ventana4/switch/state
+  command_topic: invernadero/ventana4/switch/set
+  availability_topic: invernadero/ventana4/switch/available
   payload_on: "on"
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
   optimistic: false
+  qos: 1
   retain: true
 ##############
 #Bombas
@@ -90,24 +104,28 @@
 #Bomba 1
 - name: Bomba 1
   platform: mqtt
-  command_topic: invernadero/bomba1/switch/onoff
-  availability_topic: invernadero/bomba1/switch/estado
+  state_topic: invernadero/bomba1/switch/state
+  command_topic: invernadero/bomba1/switch/set
+  availability_topic: invernadero/bomba1/switch/available
   payload_on: "on"
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
   optimistic: false
+  qos: 1
   retain: true
 #Bomba 2
 - name: Bomba 2
   platform: mqtt
-  command_topic: invernadero/bomba2/switch/onoff
-  availability_topic: invernadero/bomba2/switch/estado
+  state_topic: invernadero/bomba2/switch/state
+  command_topic: invernadero/bomba2/switch/set
+  availability_topic: invernadero/bomba2/switch/available
   payload_on: "on"
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
   optimistic: false
+  qos: 1
   retain: true
 
 

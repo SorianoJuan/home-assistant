@@ -1,84 +1,84 @@
-  - name: Humidificador
-    platform: mqtt
-    state_topic: "invernadero/humidificador/lock/state"
-    command_topic: "invernadero/humidificador/lock/set"
-    payload_lock: "on"
-    payload_unlock: "off"
-    optimistic: false
-    qos: 2
-    retain: true
-  - name: Estufa 1
-    platform: mqtt
-    state_topic: "invernadero/estufa1/lock/state"
-    command_topic: "invernadero/estufa1/lock/set"
-    payload_lock: "on"
-    payload_unlock: "off"
-    optimistic: false
-    qos: 2
-    retain: true
-  - name: Ventilador 1
-    platform: mqtt
-    state_topic: "invernadero/ventilador1/lock/state"
-    command_topic: "invernadero/ventilador1/lock/set"
-    payload_lock: "on"
-    payload_unlock: "off"
-    optimistic: false
-    qos: 2
-    retain: true
-  - name: Ventana 1
-    platform: mqtt
-    state_topic: "invernadero/ventana1/lock/state"
-    command_topic: "invernadero/ventana1/lock/set"
-    payload_lock: "on"
-    payload_unlock: "off"
-    optimistic: false
-    qos: 2
-    retain: true
-  - name: Ventana 2
-    platform: mqtt
-    state_topic: "invernadero/ventana2/lock/state"
-    command_topic: "invernadero/ventana2/lock/set"
-    payload_lock: "on"
-    payload_unlock: "off"
-    optimistic: false
-    qos: 2
-    retain: true
-  - name: Ventana 3
-    platform: mqtt
-    state_topic: "invernadero/ventana3/lock/state"
-    command_topic: "invernadero/ventana3/lock/set"
-    payload_lock: "on"
-    payload_unlock: "off"
-    optimistic: false
-    qos: 2
-    retain: true
-  - name: Ventana 4
-    platform: mqtt
-    state_topic: "invernadero/ventana4/lock/state"
-    command_topic: "invernadero/ventana4/lock/set"
-    payload_lock: "on"
-    payload_unlock: "off"
-    optimistic: false
-    qos: 2
-    retain: true
-  - name: Bomba 1
-    platform: mqtt
-    state_topic: "invernadero/bomba1/lock/state"
-    command_topic: "invernadero/bomba1/lock/set"
-    payload_lock: "on"
-    payload_unlock: "off"
-    optimistic: false
-    qos: 2
-    retain: true
-  - name: Bomba 2
-    platform: mqtt
-    state_topic: "invernadero/bomba2/lock/state"
-    command_topic: "invernadero/bomba2/lock/set"
-    payload_lock: "on"
-    payload_unlock: "off"
-    optimistic: false
-    qos: 2
-    retain: true
+#  - name: Humidificador
+#    platform: mqtt
+#    state_topic: "invernadero/humidificador/lock/state"
+#    command_topic: "invernadero/humidificador/lock/set"
+#    payload_lock: "on"
+#    payload_unlock: "off"
+#    optimistic: false
+#    qos: 2
+#    retain: true
+#  - name: Estufa 1
+#    platform: mqtt
+#    state_topic: "invernadero/estufa1/lock/state"
+#    command_topic: "invernadero/estufa1/lock/set"
+#    payload_lock: "on"
+#    payload_unlock: "off"
+#    optimistic: false
+#    qos: 2
+#    retain: true
+#  - name: Ventilador 1
+#    platform: mqtt
+#    state_topic: "invernadero/ventilador1/lock/state"
+#    command_topic: "invernadero/ventilador1/lock/set"
+#    payload_lock: "on"
+#    payload_unlock: "off"
+#    optimistic: false
+#    qos: 2
+#    retain: true
+#  - name: Ventana 1
+#    platform: mqtt
+#    state_topic: "invernadero/ventana1/lock/state"
+#    command_topic: "invernadero/ventana1/lock/set"
+#    payload_lock: "on"
+#    payload_unlock: "off"
+#    optimistic: false
+#    qos: 2
+#    retain: true
+#  - name: Ventana 2
+#    platform: mqtt
+#    state_topic: "invernadero/ventana2/lock/state"
+#    command_topic: "invernadero/ventana2/lock/set"
+#    payload_lock: "on"
+#    payload_unlock: "off"
+#    optimistic: false
+#    qos: 2
+#    retain: true
+#  - name: Ventana 3
+#    platform: mqtt
+#    state_topic: "invernadero/ventana3/lock/state"
+#    command_topic: "invernadero/ventana3/lock/set"
+#    payload_lock: "on"
+#    payload_unlock: "off"
+#    optimistic: false
+#    qos: 2
+#    retain: true
+#  - name: Ventana 4
+#    platform: mqtt
+#    state_topic: "invernadero/ventana4/lock/state"
+#    command_topic: "invernadero/ventana4/lock/set"
+#    payload_lock: "on"
+#    payload_unlock: "off"
+#    optimistic: false
+#    qos: 2
+#    retain: true
+#  - name: Bomba 1
+#    platform: mqtt
+#    state_topic: "invernadero/bomba1/lock/state"
+#    command_topic: "invernadero/bomba1/lock/set"
+#    payload_lock: "on"
+#    payload_unlock: "off"
+#    optimistic: false
+#    qos: 2
+#    retain: true
+#  - name: Bomba 2
+#    platform: mqtt
+#    state_topic: "invernadero/bomba2/lock/state"
+#    command_topic: "invernadero/bomba2/lock/set"
+#    payload_lock: "on"
+#    payload_unlock: "off"
+#    optimistic: false
+#    qos: 2
+#    retain: true
 
 
 
