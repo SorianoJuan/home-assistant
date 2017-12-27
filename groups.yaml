@@ -6,8 +6,7 @@ invernadero_view:
   view: yes
   name: Invernadero
   entities:
-    - sensor.temperatura_ambiente
-    - sensor.humedad_ambiente
+    - 
     - group.bombas
     - group.estufas
     - group.ventanas
@@ -66,14 +65,15 @@ automation_view:
 #Groups
 ##############
 
-invernadero:
-  name: Invernadero
-  entities:
-    - device_tracker.nodemcu
+######################
+##Para el invernadero
+######################
+sensores_invernadero:
+  name: Sensores invernadero
     - sensor.temperatura_ambiente
-    #- history_graph.temperature
+    
     - sensor.humedad_ambiente
-    #- history_graph.humidity
+    - history_graph.humedad_ambiente
 
 ventanas:
   name: Ventanas
@@ -99,8 +99,24 @@ ventiladores:
   entities:
     - switch.ventilador_1
 
-esp8266:
-  name: esp8266
+######################
+#Para las plantas
+######################
+
+sensores_planta1:
+  name: Sensores planta 1
+    - sensor.ph__planta_1
+    - sensor.conductividad_electrica__planta_1
+
+sensores_planta2:
+  name: Sensores planta 2
+    - sensor.ph__planta_2
+    - sensor.conductividad_electrica__planta_2
+
+sensores_planta3:
+  name: Sensores planta 3
+    - sensor.ph__planta_3
+    - sensor.conductividad_electrica__planta_3 
 
 gente:
   name: Familia
