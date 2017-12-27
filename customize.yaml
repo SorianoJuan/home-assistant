@@ -25,7 +25,7 @@ sensor.pronostico_high_clouds:
   hidden: true
 sensor.pronostico_precipitation:
   friendly_name: Precipitación
-  icon: water
+  icon: mdi:water
 sensor.pronostico_pressure:
   friendly_name: Presión
   hidden: true
