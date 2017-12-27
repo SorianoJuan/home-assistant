@@ -7,10 +7,11 @@ invernadero_view:
   name: Invernadero
   entities:
     - group.sensores_invernadero
-    - group.bombas
     - group.estufas
+    - group.humidificadores
     - group.ventanas
     - group.ventiladores
+    - group.bombas
 
 planta_1_view:
   view: yes
@@ -37,39 +38,33 @@ planta_3_view:
     - history_graph.ph_planta_3
 
 control_view:
-  name: Control
+  name: Control y Automatización
   entities:
+    - group.all_automations
+    - group.all_scripts 
 
 tiempo_pronostico_view:
   view: yes
-  name: Tiempo y pronóstico
+  name: Pronóstico
   entities:
     - group.date_time
     - group.sun
     - group.pronostico
 
-rb3_status_view:
+Dev_view:
   view: yes
-  name: Status
+  name: Dev
   entities:
     - group.rb3_hardware
     - group.speedtest
-    - group.travis
-
-automation_view:
-  name: Automatización
-  view: yes
-  entities:
-    - group.all_automations
-    - group.all_scripts    
-
+    - group.travis 
 
 ##############
 #Groups
 ##############
 
 ######################
-##Para el invernadero
+##Actuadores e invernadero
 ######################
 sensores_invernadero:
   name: Sensores invernadero
@@ -102,6 +97,11 @@ ventiladores:
   name: Ventiladores
   entities:
     - switch.ventilador_1
+
+humidificadores:
+  name: humidificadores
+  entities:
+    - switch.humidificador_ambiente
 
 ######################
 #Para las plantas

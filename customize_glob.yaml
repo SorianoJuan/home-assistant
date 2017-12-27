@@ -10,3 +10,5 @@
   icon: mdi:thermometer-lines
 "sensor.conductividad_electrica*":
   icon: mdi:flash-circle
+"sensor.humidificador*":
+  icon: mdi:water-percent

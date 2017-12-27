@@ -10,8 +10,10 @@ sensor.pronostico_dewpoint_temperature:
   friendly_name: Sens térmica
 sensor.pronostico_fog:
   friendly_name: Niebla
+  hide: true
 sensor.pronostico_humidity:
   friendly_name: Humedad
+  icon: mdi:water-percent
 sensor.pronostico_low_clouds:
   friendly_name: Nubes bajas
   hidden: true
@@ -23,14 +25,17 @@ sensor.pronostico_high_clouds:
   hidden: true
 sensor.pronostico_precipitation:
   friendly_name: Precipitación
+  icon: water
 sensor.pronostico_pressure:
   friendly_name: Presión
+  hidden: true
 sensor.pronostico_symbol:
   friendly_name: Pronóstico
 sensor.pronostico_temperature:
   friendly_name: Temperatura
 sensor.pronostico_wind_direction:
   friendly_name: Dirección del viento
+  hidden: true
 sensor.pronostico_wind_speed:
   friendly_name: Velocidad del viento
 #Travis-CI
