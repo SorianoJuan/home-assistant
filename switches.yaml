@@ -9,7 +9,7 @@
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
-  optimistic: "true"
+  optimistic: false
   retain: true
 ##############
 #Estufas
@@ -22,7 +22,7 @@
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
-  optimistic: "true"
+  optimistic: false
   retain: true
 ##############
 #Ventiladores
@@ -35,7 +35,7 @@
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
-  optimistic: "true"
+  optimistic: false
   retain: true
 ###########
 #Ventanas
@@ -49,7 +49,7 @@
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
-  optimistic: "true"
+  optimistic: false
   retain: true
 #Ventana 2
 - name: Ventana 2
@@ -60,7 +60,7 @@
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
-  optimistic: "true"
+  optimistic: false
   retain: true
 #Ventana 3
 - name: Ventana 3
@@ -71,7 +71,7 @@
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
-  optimistic: "true"
+  optimistic: false
   retain: true
 #Ventana 4
 - name: Ventana 4
@@ -82,7 +82,7 @@
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
-  optimistic: "true"
+  optimistic: false
   retain: true
 ##############
 #Bombas
@@ -96,7 +96,7 @@
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
-  optimistic: "true"
+  optimistic: false
   retain: true
 #Bomba 2
 - name: Bomba 2
@@ -107,7 +107,7 @@
   payload_off: "off"
   payload_available: "online"
   payload_not_available: "offline"
-  optimistic: "true"
+  optimistic: false
   retain: true
 
 
