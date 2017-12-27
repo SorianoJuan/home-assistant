@@ -56,3 +56,17 @@ sensor.speedtest_ping:
   friendly_name: Ping
 sensor.speedtest_upload:
   friendly_name: Upload
+#Ventiladores
+customize_glob:
+  "switch.bomba*":
+    icon: mdi:water-pump
+  "switch.ventilador*":
+    icon: mdi:fan
+  "switch.ventana*":
+    icon: mdi:window-closed
+  "switch.estufa*"
+    icon: mdi:fire
+  "sensor.ph*"
+    icon: mdi:thermometer-lines
+  "sensor.conductividad_electrica*"
+    icon: mdi:flash-circle
