@@ -17,18 +17,24 @@ planta_1_view:
   name: Planta 1
   entities:
     - group.sensores_planta1
+    - history_graph.conductividad_electrica_planta_1
+    - history_graph.ph_planta_1
 
 planta_2_view:
   view: yes
   name: Planta 2
   entities:
     - group.sensores_planta2
+    - history_graph.conductividad_electrica_planta_2
+    - history_graph.ph_planta_2
 
 planta_3_view:
   view: yes
   name: Planta 3
   entities:
     - group.sensores_planta3
+    - history_graph.conductividad_electrica_planta_3
+    - history_graph.ph_planta_3
 
 control_view:
   name: Control
@@ -69,6 +75,7 @@ sensores_invernadero:
   name: Sensores invernadero
   entities:
     - sensor.temperatura_ambiente
+    - history_graph.temperatura_ambiente
     - sensor.humedad_ambiente
     - history_graph.humedad_ambiente
 
@@ -118,12 +125,10 @@ sensores_planta3:
     - sensor.ph__planta_3
     - sensor.conductividad_electrica__planta_3 
 
-gente:
-  name: Familia
-  entities:
-    - device_tracker.torce_torce
-    - device_tracker.dell
-    - device_tracker.esprepeater
+#################
+#ETC
+#################
+
 
 #Speedtest
 speedtest:
@@ -185,32 +190,32 @@ travis:
     - sensor.sorianojuanhomeassistant_state
 
 #Cámara IP
-ipcam:
-  name: Android IP Cam
-  entities:
-    - camera.ip_webcam
-    - switch.ip_webcam_exposure_lock
-    - switch.ip_webcam_focus
-    - switch.ip_webcam_frontfacing_camera
-    - switch.ip_webcam_gps_active
-    - switch.ip_webcam_night_vision
-    - switch.ip_webcam_overlay
-    - switch.ip_webcam_torch
-    - switch.ip_webcam_video_recording
-    - switch.ip_webcam_white_balance_lock
-    - switch.ip_webcam_exposure_lock
-    - switch.ip_webcam_focus
-    - switch.ip_webcam_frontfacing_camera
-    - switch.ip_webcam_gps_active
-    - switch.ip_webcam_night_vision
-    - switch.ip_webcam_overlay
-    - switch.ip_webcam_torch
-    - switch.ip_webcam_video_recording
-    - switch.ip_webcam_white_balance_lock
-    - sensor.ip_webcam_audio_connections
-    - sensor.ip_webcam_battery_level
-    - sensor.ip_webcam_battery_temperature
-    - sensor.ip_webcam_battery_voltage
-    - sensor.ip_webcam_light_level
-    - sensor.ip_webcam_motion
-    - sensor.ip_webcam_pressure
+#ipcam:
+#  name: Android IP Cam
+#  entities:
+#    - camera.ip_webcam
+#    - switch.ip_webcam_exposure_lock
+#    - switch.ip_webcam_focus
+#    - switch.ip_webcam_frontfacing_camera
+#    - switch.ip_webcam_gps_active
+#    - switch.ip_webcam_night_vision
+#    - switch.ip_webcam_overlay
+#    - switch.ip_webcam_torch
+#    - switch.ip_webcam_video_recording
+#    - switch.ip_webcam_white_balance_lock
+#    - switch.ip_webcam_exposure_lock
+#    - switch.ip_webcam_focus
+#    - switch.ip_webcam_frontfacing_camera
+#    - switch.ip_webcam_gps_active
+#    - switch.ip_webcam_night_vision
+#    - switch.ip_webcam_overlay
+#    - switch.ip_webcam_torch
+#    - switch.ip_webcam_video_recording
+#    - switch.ip_webcam_white_balance_lock
+#    - sensor.ip_webcam_audio_connections
+#    - sensor.ip_webcam_battery_level
+#    - sensor.ip_webcam_battery_temperature
+#    - sensor.ip_webcam_battery_voltage
+#    - sensor.ip_webcam_light_level
+#    - sensor.ip_webcam_motion
+#    - sensor.ip_webcam_pressure#
