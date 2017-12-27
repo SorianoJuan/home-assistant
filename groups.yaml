@@ -38,14 +38,15 @@ planta_3_view:
     - history_graph.ph_planta_3
 
 control_view:
+  view: yes
   name: Control y Automatización
   entities:
     - group.all_automations
     - group.all_scripts 
 
-tiempo_pronostico_view:
+otros_view:
   view: yes
-  name: Pronóstico
+  name: Otros
   entities:
     - group.date_time
     - group.sun

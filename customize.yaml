@@ -10,7 +10,7 @@ sensor.pronostico_dewpoint_temperature:
   friendly_name: Sens térmica
 sensor.pronostico_fog:
   friendly_name: Niebla
-  hide: true
+  hidden: true
 sensor.pronostico_humidity:
   friendly_name: Humedad
   icon: mdi:water-percent
@@ -38,6 +38,7 @@ sensor.pronostico_wind_direction:
   hidden: true
 sensor.pronostico_wind_speed:
   friendly_name: Velocidad del viento
+  hidden: true
 #Travis-CI
 sensor.sorianojuanhomeassistant_last_build_duration:
   friendly_name: Duración del último build
