@@ -2,23 +2,20 @@
 #Views
 ############
 
-nodos_view:
+planta_1:
   view: yes
-  name: Nodos
+  name: Planta 1
   entities:
-    - group.node_mcu
 
-familia_view:
+planta_2:
   view: yes
-  name: Familia
+  name: Planta 2
   entities:
-    - group.gente
 
-ipcap_view:
+planta_3:
   view: yes
-  name: IP Cam
+  name: Planta 3
   entities:
-    - group.ipcam
     
 rb3_status_view:
   view: yes
@@ -43,6 +40,10 @@ automation_view:
     - group.all_automations
     - group.all_scripts
 
+control_view:
+  name: Control
+  entities:
+    
 
 
 ##############
