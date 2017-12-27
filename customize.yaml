@@ -64,9 +64,9 @@ customize_glob:
     icon: mdi:fan
   "switch.ventana*":
     icon: mdi:window-closed
-  "switch.estufa*"
+  "switch.estufa*":
     icon: mdi:fire
-  "sensor.ph*"
+  "sensor.ph*":
     icon: mdi:thermometer-lines
-  "sensor.conductividad_electrica*"
+  "sensor.conductividad_electrica*":
     icon: mdi:flash-circle
