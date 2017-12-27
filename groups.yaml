@@ -93,30 +93,39 @@ ventanas:
   name: Ventanas
   entities:
     - switch.ventana_1
+    - lock.ventana_1
     - switch.ventana_2
+    - lock.ventana_2
     - switch.ventana_3
+    - lock.ventana_3
     - switch.ventana_4
+    - lock.ventana_4
 
 bombas:
   name: Bombas de agua
   entities:
     - switch.bomba_1
+    - lock.bomba_1
     - switch.bomba_2
+    - lock.bomba_2
 
 estufas:
   name: Estufas
   entities:
     - switch.estufa_1
+    - lock.estufa_1
 
 ventiladores:
   name: Ventiladores
   entities:
     - switch.ventilador_1
+    - lock.ventilador_1
 
 humidificadores:
   name: Humidificadores
   entities:
     - switch.humidificador_ambiente
+    - lock.humidificador
 
 ######################
 #Para las plantas

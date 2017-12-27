@@ -1,16 +1,16 @@
-"switch.bomba*":
+"*bomba*":
   icon: mdi:water-pump
-"switch.ventilador*":
+"*ventilador*":
   icon: mdi:fan
-"switch.ventana*":
+"*ventana*":
   icon: mdi:window-closed
-"switch.estufa*":
+"*estufa*":
   icon: mdi:fire
 "sensor.ph*":
   icon: mdi:thermometer-lines
 "sensor.conductividad_electrica*":
   icon: mdi:flash-circle
-"switch.humidificador*":
+"*humidificador*":
   icon: mdi:water-percent
 "sensor.humedad*":
   icon: mdi:water-percent
