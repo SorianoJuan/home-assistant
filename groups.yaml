@@ -52,7 +52,7 @@ otros_view:
     - group.sun
     - group.pronostico
 
-Dev_view:
+dev_view:
   view: yes
   name: Dev
   entities:
@@ -71,8 +71,8 @@ Dev_view:
 user_automations:
   name: Automatizaciones
   entities:
-    - automation.home_assistant_on
-    - automation.home_assistant_off
+    - automation.alerta_de_inicio
+    - automation.alerta_de_detencion
     - automation.humedad_ambiente
 
 user_scripts:
