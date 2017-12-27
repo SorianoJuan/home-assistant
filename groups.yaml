@@ -2,20 +2,33 @@
 #Views
 ############
 
-planta_1:
+invernadero_view: 
+  view: yes
+  name: Invernadero
+  entities:
+    - sensor.temperatura_ambiente
+    - sensor.humedad_ambiente
+
+planta_1_view:
   view: yes
   name: Planta 1
   entities:
+    - sensor.ph__planta_1
+    - sensor.conductividad_electrica__planta_1
 
-planta_2:
+planta_2_view:
   view: yes
   name: Planta 2
   entities:
+    - sensor.ph__planta_2
+    - sensor.conductividad_electrica__planta_2
 
-planta_3:
+planta_3_view:
   view: yes
   name: Planta 3
   entities:
+    - sensor.ph__planta_3
+    - sensor.conductividad_electrica__planta_3
 
 control_view:
   name: Control
@@ -57,6 +70,30 @@ invernadero:
     - history_graph.temperature
     - sensor.humedad
     - history_graph.humidity
+
+ventanas:
+  name: Ventanas
+  entities:
+    - switch.ventana_1
+    - switch.ventana_2
+    - switch.ventana_3
+    - switch.ventana_4
+
+bombas:
+  name: Bombas de agua
+  entities:
+    - switch.bomba_1
+    - switch.bomba_2
+
+estufas:
+  name: Estufas
+  entities:
+    - switch.estufa_1
+
+ventiladores:
+  name: Ventiladores
+  entities:
+    - switch.ventilador_1
 
 esp8266:
   name: esp8266

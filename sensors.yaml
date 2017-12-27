@@ -67,7 +67,7 @@
   unit_of_measurement: "pH"
 #sensor 9: Humedad
 - platform: mqtt
-  name: "Conductividad eléctrica - planta 2"
+  name: "Conductividad eléctrica - planta 1"
   state_topic: "planta1/sensor/ec"
   qos: 0
   unit_of_measurement: "Siemens"
