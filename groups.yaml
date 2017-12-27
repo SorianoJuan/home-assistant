@@ -6,6 +6,7 @@ invernadero_view:
   view: yes
   name: Invernadero
   entities:
+    - group.sensores_invernadero
     - group.bombas
     - group.estufas
     - group.ventanas
@@ -15,22 +16,19 @@ planta_1_view:
   view: yes
   name: Planta 1
   entities:
-    - sensor.ph__planta_1
-    - sensor.conductividad_electrica__planta_1
+    - group.sensores_planta1
 
 planta_2_view:
   view: yes
   name: Planta 2
   entities:
-    - sensor.ph__planta_2
-    - sensor.conductividad_electrica__planta_2
+    - group.sensores_planta2
 
 planta_3_view:
   view: yes
   name: Planta 3
   entities:
-    - sensor.ph__planta_3
-    - sensor.conductividad_electrica__planta_3
+    - group.sensores_planta3
 
 control_view:
   name: Control
