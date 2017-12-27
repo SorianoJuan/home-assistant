@@ -58,11 +58,24 @@ Dev_view:
   entities:
     - group.rb3_hardware
     - group.speedtest
-    - group.travis 
+    - group.travis
+    - group.dev_scripts
 
-##############
+###########################################################################
 #Groups
-##############
+###########################################################################
+
+##################
+#Automatizaciones
+##################
+automatizaciones:
+  name: Automatizaciones
+  entities:
+    - automation.home_assistant_on
+    - automation.home_assistant_off
+    - automation.humedad_ambiente
+
+
 
 ######################
 ##Actuadores e invernadero
@@ -100,7 +113,7 @@ ventiladores:
     - switch.ventilador_1
 
 humidificadores:
-  name: humidificadores
+  name: Humidificadores
   entities:
     - switch.humidificador_ambiente
 
@@ -129,25 +142,6 @@ sensores_planta3:
 #################
 #ETC
 #################
-
-
-#Speedtest
-speedtest:
-  name: Conexion
-  entities:
-    - sensor.ipv4_address_wlan0
-    - sensor.speedtest_ping
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
-
-#Hardware RB3
-rb3_hardware:
-  name: RB3 Hardware
-  entities:
-    - sensor.cpu_used
-    - sensor.ram_available
-    - sensor.disk_free_home
-    - sensor.last_boot
 
 #Pronostico
 pronostico:
@@ -179,6 +173,20 @@ date_time:
   entities:
     - sensor.date__time
 
+
+#################
+#DEV
+#################
+dev_scripts:
+  name: Dev scripts
+  entities:
+    - script.update_config
+
+dev_autom:
+  name: Dev Automations
+  entities:
+    - automation.update_if_travispassed
+
 #Repositorio
 travis:
   name: Travis-CI
@@ -189,6 +197,25 @@ travis:
     - sensor.sorianojuanhomeassistant_last_build_started_at
     - sensor.sorianojuanhomeassistant_last_build_state
     - sensor.sorianojuanhomeassistant_state
+
+#Speedtest
+speedtest:
+  name: Conexion
+  entities:
+    - sensor.ipv4_address_wlan0
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+
+#Hardware RB3
+rb3_hardware:
+  name: RB3 Hardware
+  entities:
+    - sensor.cpu_used
+    - sensor.ram_available
+    - sensor.disk_free_home
+    - sensor.last_boot
+
 
 #Cámara IP
 #ipcam:

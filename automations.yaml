@@ -1,5 +1,5 @@
 - id: homeassistant_on
-  alias: Home Assistant On
+  alias: Alerta de detención
   trigger:
     - platform: homeassistant
       event: start
@@ -10,7 +10,7 @@
       message: "Se ha iniciado el control de hidroponia"
 
 - id: homeassistant_off
-  alias: Home Assistant Off
+  alias: Alerta de inicio
   trigger:
     - platform: homeassistant
       event: shutdown
