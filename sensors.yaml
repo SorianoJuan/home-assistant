@@ -52,6 +52,6 @@
 - platform: travisci
   api_key: !secret travis_token
   scan_interval: 30
-  default_branch: master
+  default_branch: hidroponia
   repository_names:
     - home-assistant
