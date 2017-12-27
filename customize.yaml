@@ -1,8 +1,8 @@
 #General
 group.all_automations:
-  hidden: false
+  hidden: true
 group.all_scripts:
-  hidden: false
+  hidden: true
 #Pronostico
 sensor.pronostico_cloudiness:
   friendly_name: Nubosidad

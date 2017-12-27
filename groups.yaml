@@ -41,8 +41,8 @@ control_view:
   view: yes
   name: Control y Automatización
   entities:
-    - group.all_automations
-    - group.all_scripts 
+    - group.user_automations
+    - group.user_scripts
 
 otros_view:
   view: yes
@@ -68,14 +68,15 @@ Dev_view:
 ##################
 #Automatizaciones
 ##################
-automatizaciones:
+user_automations:
   name: Automatizaciones
   entities:
     - automation.home_assistant_on
     - automation.home_assistant_off
     - automation.humedad_ambiente
 
-
+user_scripts:
+  name: Scripts
 
 ######################
 ##Actuadores e invernadero
