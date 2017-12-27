@@ -47,8 +47,8 @@
   availability_topic: invernadero/ventana1/switch/estado
   payload_on: "on"
   payload_off: "off"
-  payload_available: "online"
-  payload_not_available: "offline"
+  payload_available: "on"
+  payload_not_available: "off"
   optimistic: false
   retain: true
 #Ventana 2
