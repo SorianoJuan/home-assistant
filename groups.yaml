@@ -6,7 +6,6 @@ invernadero_view:
   view: yes
   name: Invernadero
   entities:
-    - 
     - group.bombas
     - group.estufas
     - group.ventanas
@@ -71,7 +70,6 @@ automation_view:
 sensores_invernadero:
   name: Sensores invernadero
     - sensor.temperatura_ambiente
-    
     - sensor.humedad_ambiente
     - history_graph.humedad_ambiente
 
