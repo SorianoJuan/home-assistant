@@ -2,6 +2,20 @@
 #Views
 ############
 
+default_view:
+  view: yes
+  name: Vista general
+  entities:
+    - group.sensores_invernadero
+    - group.sensores_planta1
+    - group.sensores_planta2
+    - group.sensores_planta3
+    - group.bombas
+    - group.estufas
+    - group.humidificadores
+    - group.ventanas
+    - group.ventiladores
+
 invernadero_view: 
   view: yes
   name: Invernadero
