@@ -111,7 +111,7 @@ sun:
 
 # Grafico temperatura y humedad
 history_graph:
-  #Temperatura ambiente
+#Invernadero
   gr1:
     name: Temperatura ambiente
     entities:
@@ -123,5 +123,44 @@ history_graph:
     name: Humedad ambiente
     entities:
       - sensor.humedad_ambiente
+    hours_to_show: 24
+    refresh: 120
+#Planta 1
+  gr3:
+    name: pH planta 1
+    entities:
+      - sensor.ph__planta_1
+    hours_to_show: 24
+    refresh: 120
+  gr4:
+    name: Conductividad eléctrica planta 1
+    entities:
+      - sensor.conductividad_electrica__planta_1
+    hours_to_show: 24
+    refresh: 120
+#Planta 2
+  gr5:
+    name: pH planta 2
+    entities:
+      - sensor.ph__planta_2
+    hours_to_show: 24
+    refresh: 120
+  gr6:
+    name: Conductividad eléctrica planta 2
+    entities:
+      - sensor.conductividad_electrica__planta_2
+    hours_to_show: 24
+    refresh: 120
+#Planta 3
+  gr7:
+    name: pH planta 3
+    entities:
+      - sensor.ph__planta_3
+    hours_to_show: 24
+    refresh: 120
+  gr8:
+    name: Conductividad eléctrica planta 3
+    entities:
+      - sensor.conductividad_electrica__planta_3
     hours_to_show: 24
     refresh: 120

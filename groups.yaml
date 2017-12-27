@@ -103,8 +103,8 @@ ventiladores:
 sensores_planta1:
   name: Sensores Planta 1
     entities:
-    - sensor.ph__planta_1
-    - sensor.conductividad_electrica__planta_1
+      - sensor.ph__planta_1
+      - sensor.conductividad_electrica__planta_1
 
 sensores_planta2:
   name: Sensores planta 2
