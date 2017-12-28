@@ -1,1 +1,8 @@
-sad
+#- platform: mqtt
+#  state_topic: "invernadero/sensor/temperature1/avaliable"
+#  name: "Sensor de T y Humedad"
+#  qos: 0
+#  payload_on: "online"
+#  payload_off: "offline"
+#  sensor_class: connectivity
+#  hidden: true
