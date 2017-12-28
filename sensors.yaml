@@ -36,19 +36,7 @@
     - ping
     - download
     - upload
-#sensor 5: Temperatura
-- platform: mqtt
-  name: "Temperatura ambiente"
-  state_topic: "sensor/temperature"
-  qos: 0
-  unit_of_measurement: "°C"
-#sensor 6: Humedad
-- platform: mqtt
-  name: "Humedad ambiente"
-  state_topic: "sensor/humidity"
-  qos: 0
-  unit_of_measurement: "%"
-#sensor 7: Travis
+#sensor 5: Travis
 - platform: travisci
   api_key: !secret travis_token
   scan_interval: 30
@@ -57,15 +45,30 @@
     - home-assistant
 
 #############
+#INVERNADERO
+#############
+#sensor 6: Temperatura
+- platform: mqtt
+  name: "Temperatura ambiente"
+  state_topic: "invernadero/sensor/temperature1"
+  qos: 0
+  unit_of_measurement: "°C"
+#sensor 7: Humedad
+- platform: mqtt
+  name: "Humedad ambiente"
+  state_topic: "invernadero/sensor/humidity1"
+  qos: 0
+  unit_of_measurement: "%"
+#############
 # PLANTA 1
 #############
-#sensor 8: Temperatura
+#sensor 8: pH - planta 1
 - platform: mqtt
   name: "pH - planta 1"
   state_topic: "planta1/sensor/ph"
   qos: 0
   unit_of_measurement: "pH"
-#sensor 9: Humedad
+#sensor 9: EC - planta 1
 - platform: mqtt
   name: "Conductividad eléctrica - planta 1"
   state_topic: "planta1/sensor/ec"
@@ -74,13 +77,13 @@
 #############
 # PLANTA 2
 #############
-#sensor 5: Temperatura
+#sensor 10: pH - planta 2
 - platform: mqtt
   name: "pH - planta 2"
   state_topic: "planta2/sensor/ph"
   qos: 0
   unit_of_measurement: "pH"
-#sensor 6: Humedad
+#sensor 11: EC - planta 2
 - platform: mqtt
   name: "Conductividad eléctrica - planta 2"
   state_topic: "planta2/sensor/ec"
@@ -89,15 +92,42 @@
 #############
 # PLANTA 3
 #############
-  #sensor 5: Temperatura
+#sensor 12: pH - planta 3
 - platform: mqtt
   name: "pH - planta 3"
   state_topic: "planta3/sensor/ph"
   qos: 0
   unit_of_measurement: "pH"
-#sensor 6: Humedad
+#sensor 13: EC - planta 3
 - platform: mqtt
   name: "Conductividad eléctrica - planta 3"
   state_topic: "planta3/sensor/ec"
   qos: 0
   unit_of_measurement: "Siemens"
+
+
+
+#############
+# PRESENCIAS
+#############
+#device_id (Required): The device id to track for this sensor.
+#name (Optional): The name of the sensor.
+#state_topic (Optional): The topic that contains all subtopics for the rooms.
+#timeout (Optional): The time in seconds after which a room presence state is considered old. An example: device1 is reported at scanner1 with a distance of 1. No further updates are sent from scanner1. After 5 seconds scanner2 reports device1 with a distance of 2. The old location info is discarded in favor of the new scanner2 information as the timeout has passed.
+#away_timeout (Optional): The time in seconds after which the state should be set to not_home if there were no updates. 0 disables the check and is the default.
+#--------------------------
+#sensor 14: presencia T Invernadero
+- platform: mqtt_room
+  device_id: sensor.temperatura_ambiente
+  name: Temperatura Ambiente
+  state_topic: invernadero/sensor/temperature1/presence
+  timeout: 60
+  away_timeout: 60
+
+- platform: template
+  sensors:
+    lastupdated:
+      friendly_name: "Ultimo update de temperatura: "
+      entity_id: sensor.temperatura_ambiente
+      value_template: '{{as_timestamp(states.sensor.temperatura_ambiente.last_changed)}}'
+
