@@ -1,7 +1,7 @@
-manual_or_automatic:
-  name: Control
-  options:
-    - Manual
-    - Automático
-  initial: Automático
-  icon: mdi:eye
+#manual_or_automatic:
+#  name: Control
+#  options:
+#    - Manual
+#    - Automático
+#  initial: Automático
+#  icon: mdi:eye

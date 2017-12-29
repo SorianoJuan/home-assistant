@@ -1,15 +1,15 @@
 #Invernadero
 control_humedad:
-  name: Control automático de humedad
+  name: Control automático de Hum
   initial: on
   icon: mdi:water-percent
 control_temperatura:
-  name: Control automático de temperatura
+  name: Control automático de Temp
   initial: on
   icon: mdi:thermometer
 #Planta1
 control_planta1_ph:
-  name: Control automático de humedad
+  name: Control automático de pH
   initial: on
   icon: mdi:thermometer-lines
 control_planta1_ec:
@@ -18,7 +18,7 @@ control_planta1_ec:
   icon: mdi:flash-circle
 #Planta2
 control_planta2_ph:
-  name: Control automático de humedad
+  name: Control automático de pH
   initial: on
   icon: mdi:thermometer-lines
 control_planta2_ec:
@@ -27,7 +27,7 @@ control_planta2_ec:
   icon: mdi:flash-circle
 #Planta3
 control_planta3_ph:
-  name: Control automático de humedad
+  name: Control automático de pH
   initial: on
   icon: mdi:thermometer-lines
 control_planta3_ec:
