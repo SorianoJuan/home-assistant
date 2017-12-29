@@ -9,7 +9,7 @@ temp_min:
   step: 1
   mode: box
   unit_of_measurement: "°C"
-  icon: mdi:water-percent
+  icon: mdi:thermometer
 temp_max:
   name: Temp máx
   min: 0
@@ -17,7 +17,7 @@ temp_max:
   step: 1
   mode: box
   unit_of_measurement: "°C"
-  icon: mdi:water-percent
+  icon: mdi:thermometer
 #Humedad
 humedad_min:
   name: Humedad min

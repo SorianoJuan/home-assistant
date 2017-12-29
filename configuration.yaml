@@ -42,7 +42,7 @@ camera: !include cameras.yaml
 device_tracker: !include device_trackers.yaml
 group: !include groups.yaml
 input_number: !include input_number.yaml
-#input_select: !include input_select.yaml
+input_select: !include input_select.yaml
 light: !include lights.yaml
 lock: !include locks.yaml
 media_player: !include media_players.yaml
