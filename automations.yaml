@@ -29,7 +29,7 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.humedad
-      below: {{ states.input_number.humedad_min.state | float}}
+      below: 60
   condition:
     condition: state
     entity_id: switch.humidificador_ambiente
