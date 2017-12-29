@@ -57,7 +57,7 @@ control_view:
   view: yes
   name: Control y Automatización
   entities:
-    - input_select.manual_or_automatic
+    - group.input_select
     - group.user_automations
     - group.user_scripts
     - group.invernadero_automations
@@ -131,6 +131,11 @@ planta3_automations:
 
 user_scripts:
   name: Scripts
+
+input_select:
+  name: Control de Hidroponia
+  entities:
+    - input_select.manual_or_automatic
 
 ######################
 ##Actuadores e invernadero
