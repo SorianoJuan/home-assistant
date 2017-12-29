@@ -1,0 +1,4 @@
+control_humedad:
+  name: Control automático de humedad
+  initial: on
+  icon: mdi:water-percent

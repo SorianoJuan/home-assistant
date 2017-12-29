@@ -58,7 +58,6 @@ control_view:
   name: Control y Automatización
   entities:
     - group.user_automations
-    - group.input_select
     - group.user_scripts
     - group.invernadero_automations
     - group.planta1_automations
