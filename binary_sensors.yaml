@@ -7,24 +7,30 @@
         - input_number.temp_max
         - sensor.temperatura_ambiente
       value_template: >-
-        {{ (states('sensor.temperatura_ambiente')|float < states('input_number.temp_min')|float ) 
-        and (states('input_number.temp_min')|float > states('input_number.temp_max')|float) }}
+        {{ (states('sensor.temperatura_ambiente')|float < states('input_number.temp_min')|float) 
+        and (states('input_number.temp_min')|float < states('input_number.temp_max')|float) }}
     temp_threshold_max:
       entity_id:
+        - input_number.temp_min
         - input_number.temp_max
         - sensor.temperatura_ambiente
       value_template: >-
-        {{ states('sensor.temperatura_ambiente')|float > states('input_number.temp_max')|float }}
+        {{ (states('sensor.temperatura_ambiente')|float > states('input_number.temp_max')|float) 
+        and (states('input_number.temp_min')|float < states('input_number.temp_max')|float) }}
 #Humedad
     hum_threshold_min:
       entity_id:
         - input_number.humedad_min
-        - sensor.humedad_ambiente
-      value_template: >-
-        {{ states('sensor.humedad_ambiente')|float < states('input_number.humedad_min')|float }}
-    hum_threshold_max:
-      entity_id:
         - input_number.humedad_max
         - sensor.humedad_ambiente
       value_template: >-
-        {{ states('sensor.humedad_ambiente')|float > states('input_number.humedad_max')|float }}
+        {{ (states('sensor.humedad_ambiente')|float < states('input_number.humedad_min')|float) 
+        and (states('input_number.humedad_min')|float < states('input_number.humedad_max'))|float }}
+    hum_threshold_max:
+      entity_id:
+        - input_number.humedad_min
+        - input_number.humedad_max
+        - sensor.humedad_ambiente
+      value_template: >-
+        {{ (states('sensor.humedad_ambiente')|float > states('input_number.humedad_max')|float) 
+        and (states('input_number.humedad_min')|float < states('input_number.humedad_max'))|float }}
