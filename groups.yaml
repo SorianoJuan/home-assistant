@@ -57,12 +57,12 @@ control_view:
   view: yes
   name: Control y Automatización
   entities:
-    - group.user_automations
-    - group.user_scripts
     - group.invernadero_automations
     - group.planta1_automations
     - group.planta2_automations
     - group.planta3_automations
+    - group.user_automations
+    - group.user_scripts
 
 otros_view:
   view: yes
@@ -89,7 +89,7 @@ dev_view:
 #Automatizaciones
 ##################
 user_automations:
-  name: Automatizaciones
+  name: Otras automatizaciones
   entities:
     - automation.alerta_de_inicio
     - automation.alerta_de_detencion
@@ -97,33 +97,40 @@ user_automations:
 invernadero_automations:
   name: Invernadero
   entities:
-    - input_number.humedad_min
-    - input_number.humedad_max
-    - input_boolean.control_humedad
+    - input_boolean.control_temperatura
     - input_number.temp_min
     - input_number.temp_max
+    - input_boolean.control_humedad
+    - input_number.humedad_min
+    - input_number.humedad_max
 
 planta1_automations:
   name: Planta 1
   entities:
+    - input_boolean.control_planta1_ph
     - input_number.planta1_ph_min
     - input_number.planta1_ph_max
+    - input_boolean.control_planta1_ec
     - input_number.planta1_ec_min
     - input_number.planta1_ec_max
 
 planta2_automations:
   name: Planta 2
   entities:
+    - input_boolean.control_planta2_ph
     - input_number.planta2_ph_min
     - input_number.planta2_ph_max
+    - input_boolean.control_planta2_ec
     - input_number.planta2_ec_min
     - input_number.planta2_ec_max
 
 planta3_automations:
   name: Planta 3
   entities:
+    - input_boolean.control_planta3_ph
     - input_number.planta3_ph_min
     - input_number.planta3_ph_max
+    - input_boolean.control_planta3_ec
     - input_number.planta3_ec_min
     - input_number.planta3_ec_max
 
