@@ -59,7 +59,8 @@ control_view:
   entities:
     - group.user_automations
     - group.user_scripts
-    - group.internadero_automations
+    - input_select.manual_or_automatic
+    - group.invernadero_automations
     - group.planta1_automations
     - group.planta2_automations
     - group.planta3_automations

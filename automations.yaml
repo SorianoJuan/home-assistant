@@ -1,3 +1,7 @@
+#######################
+#Alertas homeassistant
+#######################
+
 - id: homeassistant_on
   alias: Alerta de detención
   trigger:
@@ -19,6 +23,31 @@
     data_template:
       title: "Control de hidroponia OFFLINE"
       message: "Se ha detenido el control de hidroponia"
+
+#Hiding automations
+- id: hide_manual_automatic
+  alias: Hide automatic
+  trigger:
+    - platform: state
+    - entity_id: input_select.manual_or_automatic
+    - to: "Manual"
+  action:
+    service: group.set_visibility
+    entity_id: group.invernadero_automations
+    data:
+      visible: False
+#Showing automations
+- id: show_manual_automatic
+  alias: Show automatic
+  trigger:
+    - platform: state
+    - entity_id: input_select.manual_or_automatic
+    - to: "Automático"
+  action:
+    service: group.set_visibility
+    entity_id: group.invernadero_automations
+    data:
+      visible: True
 
 ###################
 #HUMEDAD

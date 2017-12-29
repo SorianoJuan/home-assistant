@@ -1,4 +1,5 @@
 manual_or_automatic:
+  alias: Control
   name: Control
   options:
     - Manual
