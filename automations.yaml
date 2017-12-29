@@ -33,7 +33,11 @@
       to: "Manual"
   action:
     service: group.set_visibility
-    entity_id: group.invernadero_automations
+    entity_id: 
+      - group.invernadero_automations
+      - group.planta1_automations
+      - group.planta2_automations
+      - group.planta3_automations
     data:
       visible: False
 #Showing automations

@@ -57,9 +57,9 @@ control_view:
   view: yes
   name: Control y Automatización
   entities:
+    - input_select.manual_or_automatic
     - group.user_automations
     - group.user_scripts
-    - input_select.manual_or_automatic
     - group.invernadero_automations
     - group.planta1_automations
     - group.planta2_automations
