@@ -29,7 +29,7 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.hum_threshold_min
-      state: 'on'
+      to: 'on'
   condition:
     condition: state
     entity_id: switch.humidificador_ambiente
@@ -49,7 +49,7 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.hum_threshold_max
-      state: 'on'
+      to: 'on'
   condition:
     condition: state
     entity_id: switch.humidificador_ambiente
