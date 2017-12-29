@@ -1,5 +1,19 @@
 - platform: template
   sensors: 
+#Temperatura
+    temp_threshold_min:
+      entity_id:
+        - input_number.temp_min
+        - sensor.temperatura_ambiente
+      value_template: >-
+        {{ states('sensor.temperatura_ambiente')|float < states('input_number.temp_min')|float }}
+    temp_threshold_max:
+      entity_id:
+        - input_number.temp_max
+        - sensor.temperatura_ambiente
+      value_template: >-
+        {{ states('sensor.temperatura_ambiente')|float > states('input_number.temp_max')|float }}
+#Humedad
     hum_threshold_min:
       entity_id:
         - input_number.humedad_min
@@ -8,7 +22,7 @@
         {{ states('sensor.humedad_ambiente')|float < states('input_number.humedad_min')|float }}
     hum_threshold_max:
       entity_id:
-        - input_number.humedad_min
+        - input_number.humedad_max
         - sensor.humedad_ambiente
       value_template: >-
-        {{ states('sensor.humedad_ambiente')|float < states('input_number.humedad_min')|float }}
+        {{ states('sensor.humedad_ambiente')|float > states('input_number.humedad_max')|float }}
