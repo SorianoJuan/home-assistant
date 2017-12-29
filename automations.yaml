@@ -23,13 +23,13 @@
 ###################
 #HUMEDAD
 ###################
-#INFERIOR AL 60%
+#INFERIOR AL MIN
 - id: humedad_inf
   alias: Humedad > Min
   trigger:
-    - platform: numeric_state
-      entity_id: sensor.humedad
-      below: 60
+    - platform: state
+      entity_id: binary_sensor.hum_threshold_min
+      state: 'on'
   condition:
     condition: state
     entity_id: switch.humidificador_ambiente
@@ -43,13 +43,13 @@
       data:
         topic: "invernadero/humidificador/switch/set"
         payload: "on"
-#SUPERIOR AL 80%
+#SUPERIOR AL MAX
 - id: humedad_sup
   alias: Humedad < Max
   trigger:
-    - platform: numeric_state
-      entity_id: sensor.humedad
-      above: 80
+    - platform: state
+      entity_id: binary_sensor.hum_threshold_max
+      state: 'on'
   condition:
     condition: state
     entity_id: switch.humidificador_ambiente
