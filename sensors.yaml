@@ -119,7 +119,7 @@
 #sensor 14: presencia T Invernadero
 - platform: mqtt_room
   device_id: sensor.temperatura_ambiente
-  name: Temperatura Ambiente
+  name: "Temperatura ambiente on/off"
   state_topic: invernadero/sensor/temperature1/presence
   timeout: 60
   away_timeout: 60
