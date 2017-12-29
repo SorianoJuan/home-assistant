@@ -62,15 +62,20 @@
 ###################
 #INFERIOR AL MIN
 - id: humedad_inf
-  alias: Humedad > Min
+  alias: Humedad < Min
   trigger:
     - platform: state
       entity_id: binary_sensor.hum_threshold_min
       to: 'on'
   condition:
-    condition: state
-    entity_id: switch.humidificador_ambiente
-    state: 'off'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: switch.humidificador_ambiente
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.control_humedad
+        state: "on"
   action:
     - service: notify.mypushbullet
       data_template:
@@ -82,15 +87,20 @@
         payload: "on"
 #SUPERIOR AL MAX
 - id: humedad_sup
-  alias: Humedad < Max
+  alias: Humedad > Max
   trigger:
     - platform: state
       entity_id: binary_sensor.hum_threshold_max
       to: 'on'
   condition:
-    condition: state
-    entity_id: switch.humidificador_ambiente
-    state: 'on'
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: switch.humidificador_ambiente
+        state: 'on'
+      - condition: state
+        entity_id: input_boolean.control_humedad
+        state: "on"
   action:
     - service: notify.mypushbullet
       data_template:

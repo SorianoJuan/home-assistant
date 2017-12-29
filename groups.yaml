@@ -98,9 +98,8 @@ invernadero_automations:
   name: Invernadero
   entities:
     - input_number.humedad_min
-    - automation.humedad__60
     - input_number.humedad_max
-    - automation.humedad__80
+    - input_boolean.control_humedad
     - input_number.temp_min
     - input_number.temp_max
 
