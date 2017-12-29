@@ -29,15 +29,13 @@
   alias: Hide automatic
   trigger:
     - platform: state
-      entity_id: input_select.manual_or_automatic
-      to: "Manual"
+      entity_id: input_boolean.control_humedad
+      to: "off"
   action:
     service: group.set_visibility
     entity_id: 
-      - group.invernadero_automations
-      - group.planta1_automations
-      - group.planta2_automations
-      - group.planta3_automations
+      - input_number.temp_min
+      - input_number.temp_max
     data:
       visible: False
 #Showing automations
@@ -50,10 +48,8 @@
   action:
     service: group.set_visibility
     entity_id: 
-      - group.invernadero_automations
-      - group.planta1_automations
-      - group.planta2_automations
-      - group.planta3_automations
+      - input_number.temp_min
+      - input_number.temp_max
     data:
       visible: True
 
