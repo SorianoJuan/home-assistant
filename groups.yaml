@@ -137,6 +137,8 @@ input_select:
   entities:
     - input_select.manual_or_automatic
 
+#
+
 ######################
 ##Actuadores e invernadero
 ######################
