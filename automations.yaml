@@ -37,7 +37,7 @@
   action:
     - service: notify.mypushbullet
       data_template:
-        title: "La humedad ambiente descendió del 60%"
+        title: "La humedad ambiente descendió del mínimo establecido: {{ states.input_number.humedad_min.state }}%"
         message: "La humedad ambiente es de: {{ states.sensor.humedad_ambiente.state }}%, accionando humidificador"
     - service: mqtt.publish
       data:
@@ -57,7 +57,7 @@
   action:
     - service: notify.mypushbullet
       data_template:
-        title: "La humedad ambiente superó el 80%"
+        title: "La humedad ambiente superó el máximo establecido: {{ states.input_number.humedad_max.state }}%"
         message: "La humedad ambiente es de: {{ states.sensor.humedad_ambiente.state }}%, deteniendo humidificador"
     - service: mqtt.publish
       data:
