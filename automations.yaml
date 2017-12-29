@@ -25,7 +25,7 @@
 ###################
 #INFERIOR AL 60%
 - id: humedad_inf
-  alias: Control automático de humedad < 60%
+  alias: Humedad > 60%
   trigger:
     - platform: numeric_state
       entity_id: sensor.humedad
@@ -38,14 +38,14 @@
     - service: notify.mypushbullet
       data_template:
         title: "La humedad ambiente descendió del 60%"
-        message: "La humedad ambiente es de: {{ states.sensor.humedad.state }}%, accionando humidificador"
+        message: "La humedad ambiente es de: {{ states.sensor.humedad_ambiente.state }}%, accionando humidificador"
     - service: mqtt.publish
       data:
         topic: "invernadero/humidificador/switch/set"
         payload: "on"
 #SUPERIOR AL 80%
 - id: humedad_sup
-  alias: Control automático de humedad > 80%
+  alias: Humedad < 80%
   trigger:
     - platform: numeric_state
       entity_id: sensor.humedad
@@ -58,7 +58,7 @@
     - service: notify.mypushbullet
       data_template:
         title: "La humedad ambiente superó el 80%"
-        message: "La humedad ambiente es de: {{ states.sensor.humedad.state }}%, deteniendo humidificador"
+        message: "La humedad ambiente es de: {{ states.sensor.humedad_ambiente.state }}%, deteniendo humidificador"
     - service: mqtt.publish
       data:
         topic: "invernadero/humidificador/switch/set"

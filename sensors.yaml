@@ -53,12 +53,14 @@
   state_topic: "invernadero/sensor/temperature1"
   qos: 0
   unit_of_measurement: "°C"
+  force_update: true
 #sensor 7: Humedad
 - platform: mqtt
   name: "Humedad ambiente"
   state_topic: "invernadero/sensor/humidity1"
   qos: 0
   unit_of_measurement: "%"
+  force_update: true
 #############
 # PLANTA 1
 #############
@@ -68,12 +70,14 @@
   state_topic: "planta1/sensor/ph"
   qos: 0
   unit_of_measurement: "pH"
+  force_update: true
 #sensor 9: EC - planta 1
 - platform: mqtt
   name: "Conductividad eléctrica - planta 1"
   state_topic: "planta1/sensor/ec"
   qos: 0
   unit_of_measurement: "Siemens"
+  force_update: true
 #############
 # PLANTA 2
 #############
@@ -83,12 +87,14 @@
   state_topic: "planta2/sensor/ph"
   qos: 0
   unit_of_measurement: "pH"
+  force_update: true
 #sensor 11: EC - planta 2
 - platform: mqtt
   name: "Conductividad eléctrica - planta 2"
   state_topic: "planta2/sensor/ec"
   qos: 0
   unit_of_measurement: "Siemens"
+  force_update: true
 #############
 # PLANTA 3
 #############
@@ -98,12 +104,14 @@
   state_topic: "planta3/sensor/ph"
   qos: 0
   unit_of_measurement: "pH"
+  force_update: true
 #sensor 13: EC - planta 3
 - platform: mqtt
   name: "Conductividad eléctrica - planta 3"
   state_topic: "planta3/sensor/ec"
   qos: 0
   unit_of_measurement: "Siemens"
+  force_update: true
 
 
 
@@ -117,17 +125,17 @@
 #away_timeout (Optional): The time in seconds after which the state should be set to not_home if there were no updates. 0 disables the check and is the default.
 #--------------------------
 #sensor 14: presencia T Invernadero
-- platform: mqtt_room
-  device_id: sensor.temperatura_ambiente
-  name: "Temperatura ambiente on/off"
-  state_topic: invernadero/sensor/temperature1/presence
-  timeout: 60
-  away_timeout: 60
-
-- platform: template
-  sensors:
-    lastupdated:
-      friendly_name: "Ultimo update de temperatura: "
-      entity_id: sensor.temperatura_ambiente
-      value_template: '{{as_timestamp(states.sensor.temperatura_ambiente.last_changed)}}'
+#- platform: mqtt_room
+#  device_id: sensor.temperatura_ambiente
+#  name: "Temperatura ambiente on/off"
+#  state_topic: invernadero/sensor/temperature1/presence
+#  timeout: 60
+#  away_timeout: 60
+#
+#- platform: template
+#  sensors:
+#    lastupdated:
+#      friendly_name: "Ultimo update de temperatura: "
+#      entity_id: sensor.temperatura_ambiente
+#      value_template: '{{as_timestamp(states.sensor.temperatura_ambiente.last_changed)}}'
 
