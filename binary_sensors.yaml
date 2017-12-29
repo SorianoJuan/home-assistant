@@ -26,7 +26,7 @@
       entity_id:
         - sensor.temperatura_ambiente
       value_template: >-
-        {{ ((as_timestamp(now()) - as_timestamp(states.sensor.temperatura_ambiente.last_changed))/60)|int > 1 | int}}
+        '{{ ((as_timestamp(now()) - as_timestamp(states.sensor.temperatura_ambiente.last_changed)) < 60) }}'
 ###########
 #Humedad
 ###########
