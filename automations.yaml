@@ -29,8 +29,8 @@
   alias: Hide automatic
   trigger:
     - platform: state
-    - entity_id: input_select.manual_or_automatic
-    - to: "Manual"
+      entity_id: input_select.manual_or_automatic
+      to: "Manual"
   action:
     service: group.set_visibility
     entity_id: group.invernadero_automations
@@ -41,8 +41,8 @@
   alias: Show automatic
   trigger:
     - platform: state
-    - entity_id: input_select.manual_or_automatic
-    - to: "Automático"
+      entity_id: input_select.manual_or_automatic
+      to: "Automático"
   action:
     service: group.set_visibility
     entity_id: group.invernadero_automations
