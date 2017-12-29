@@ -59,6 +59,10 @@ control_view:
   entities:
     - group.user_automations
     - group.user_scripts
+    - group.internadero_automations
+    - group.planta1_automations
+    - group.planta2_automations
+    - group.planta3_automations
 
 otros_view:
   view: yes
@@ -89,10 +93,6 @@ user_automations:
   entities:
     - automation.alerta_de_inicio
     - automation.alerta_de_detencion
-    - group.internadero_automations
-    - group.planta1_automations
-    - group.planta2_automations
-    - group.planta3_automations
 
 invernadero_automations:
   name: Invernadero
