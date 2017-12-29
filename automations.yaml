@@ -25,11 +25,11 @@
 ###################
 #INFERIOR AL 60%
 - id: humedad_inf
-  alias: Humedad > 60%
+  alias: Humedad > Min
   trigger:
     - platform: numeric_state
       entity_id: sensor.humedad
-      below: 60
+      below: '{{ states.input_number.humedad_min.state | float}}'
   condition:
     condition: state
     entity_id: switch.humidificador_ambiente
@@ -45,7 +45,7 @@
         payload: "on"
 #SUPERIOR AL 80%
 - id: humedad_sup
-  alias: Humedad < 80%
+  alias: Humedad < Max
   trigger:
     - platform: numeric_state
       entity_id: sensor.humedad
