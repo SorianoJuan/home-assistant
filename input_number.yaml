@@ -1,16 +1,148 @@
-slider1:
-  name: Humedad
+###############
+#INVERNADERO
+###############
+#Temperatura
+temp_min:
+  name: Temp min
   min: 0
-  max: 100
+  max: 30
   step: 1
-  mode: slider
-  unit_of_measurement: "%"
+  mode: box
+  unit_of_measurement: "°C"
   icon: mdi:water-percent
-box1:
-  name: Humedad_num
+temp_max:
+  name: Temp máx
+  min: 0
+  max: 30
+  step: 1
+  mode: box
+  unit_of_measurement: "°C"
+  icon: mdi:water-percent
+#Humedad
+humedad_min:
+  name: Humedad min
   min: 0
   max: 100
   step: 1
   mode: box
   unit_of_measurement: "%"
   icon: mdi:water-percent
+humedad_max:
+  name: Humedad máx
+  min: 0
+  max: 100
+  step: 1
+  mode: box
+  unit_of_measurement: "%"
+  icon: mdi:water-percent
+###############
+#PLANTA 1
+###############
+#Planta 1 - pH
+planta1_ph_min:
+  name: pH min
+  min: 0
+  max: 14
+  step: 0.1
+  mode: box
+  unit_of_measurement: "pH"
+  icon: mdi:thermometer-lines
+planta1_ph_max:
+  name: pH max
+  min: 0
+  max: 100
+  step: 1
+  mode: box
+  unit_of_measurement: "pH"
+  icon: mdi:thermometer-lines
+#Planta 1 - EC
+planta1_ec_min:
+  name: EC min
+  min: 0
+  max: 10
+  step: 0.1
+  mode: box
+  unit_of_measurement: "Siemens"
+  icon: mdi:flash-circle
+planta1_ec_max:
+  name: EC máx
+  min: 0
+  max: 10
+  step: 0.1
+  mode: box
+  unit_of_measurement: "Siemens"
+  icon: mdi:flash-circle
+###############
+#PLANTA 2
+###############
+#Planta 2 - pH
+planta2_ph_min:
+  name: pH min
+  min: 0
+  max: 14
+  step: 0.1
+  mode: box
+  unit_of_measurement: "pH"
+  icon: mdi:thermometer-lines
+planta2_ph_max:
+  name: pH max
+  min: 0
+  max: 100
+  step: 1
+  mode: box
+  unit_of_measurement: "pH"
+  icon: mdi:thermometer-lines
+#Planta 2 - EC
+planta2_ec_min:
+  name: EC min
+  min: 0
+  max: 10
+  step: 0.1
+  mode: box
+  unit_of_measurement: "Siemens"
+  icon: mdi:flash-circle
+planta2_ec_max:
+  name: EC máx
+  min: 0
+  max: 10
+  step: 0.1
+  mode: box
+  unit_of_measurement: "Siemens"
+  icon: mdi:flash-circle
+###############
+#PLANTA 3
+###############
+#Planta 3 - pH
+planta3_ph_min:
+  name: pH min
+  min: 0
+  max: 14
+  step: 0.1
+  mode: box
+  unit_of_measurement: "pH"
+  icon: mdi:thermometer-lines
+planta3_ph_max:
+  name: pH max
+  min: 0
+  max: 100
+  step: 1
+  mode: box
+  unit_of_measurement: "pH"
+  icon: mdi:thermometer-lines
+#Planta 3 - EC
+planta3_ec_min:
+  name: EC min
+  min: 0
+  max: 10
+  step: 0.1
+  mode: box
+  unit_of_measurement: "Siemens"
+  icon: mdi:flash-circle
+planta3_ec_max:
+  name: EC máx
+  min: 0
+  max: 10
+  step: 0.1
+  mode: box
+  unit_of_measurement: "Siemens"
+  icon: mdi:flash-circle
