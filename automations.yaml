@@ -20,25 +20,49 @@
       title: "Control de hidroponia OFFLINE"
       message: "Se ha detenido el control de hidroponia"
 
-- id: humedad
-  alias: Humedad ambiente
+###################
+#HUMEDAD
+###################
+#INFERIOR AL 60%
+- id: humedad_inf
+  alias: Control automático de humedad < 60%
   trigger:
-    platform: numeric_state
-    entity_id: sensor.humedad
-    above: 80
+    - platform: numeric_state
+      entity_id: sensor.humedad
+      below: 60
+  condition:
+    condition: state
+    entity_id: switch.humidificador_ambiente
+    state: 'off'
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: "La humedad ambiente descendió del 60%"
+        message: "La humedad ambiente es de: {{ states.sensor.humedad.state }}%, accionando humidificador"
+    - service: mqtt.publish
+      data:
+        topic: "invernadero/humidificador/switch/set"
+        payload: "on"
+#SUPERIOR AL 80%
+- id: humedad_sup
+  alias: Control automático de humedad > 80%
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.humedad
+      above: 80
+  condition:
+    condition: state
+    entity_id: switch.humidificador_ambiente
+    state: 'on'
   action:
     - service: notify.mypushbullet
       data_template:
         title: "La humedad ambiente superó el 80%"
-        message: "La humedad ambiente es de: {{ states.sensor.humedad.state }}%"
+        message: "La humedad ambiente es de: {{ states.sensor.humedad.state }}%, deteniendo humidificador"
     - service: mqtt.publish
       data:
-        topic: "sensor/led"
-        payload: "on"
-    - service: mqtt.publish
-      data:
-        topic: "sensor/relay"
-        payload: "on"
+        topic: "invernadero/humidificador/switch/set"
+        payload: "off"
 
 - id: travis_automation
   alias: 'Update if Travis=passed'
