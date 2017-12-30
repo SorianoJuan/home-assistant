@@ -119,7 +119,7 @@
     tiempo_temperatura:
       friendly_name: "tiempo temp"
       entity_id: sensor.temperatura_ambiente
-      value_template: {{as_timestamp(now()) - as_timestamp(states.sensor.temperatura_ambiente.last_changed)}}
+      value_template: "{{as_timestamp(now()) - as_timestamp(states.sensor.temperatura_ambiente.last_changed)}}"
 
 
 #############
