@@ -34,9 +34,9 @@
       to: "off"
   action:
     - service: notify.mypushbullet
-      data:
+      data_template:
         title: "Un nodo se ha desconectado"
-        message: "Un nodo no se ha comunicado por más de 60 segundos"
+        message: "No se han recibido actualizaciones de un nodo por más de 60 segundos"
 
 ##Hiding automations
 #- id: hide_manual_automatic
