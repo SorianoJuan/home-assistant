@@ -24,9 +24,9 @@
 #Online
     temp_offline_timeout:
       entity_id:
-        - sensor.temperatura_ambiente
+        - sensor.date__time
       value_template: >-
-        {{ ((as_timestamp(now()) - as_timestamp(states.sensor.temperatura_ambiente.last_changed))/60|int < 60) }}
+        {{ ((as_timestamp(now()) - as_timestamp(states.sensor.temperatura_ambiente.last_changed)) > 60) }}
 ###########
 #Humedad
 ###########
