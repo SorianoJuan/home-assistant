@@ -25,6 +25,7 @@
     temp_offline_timeout:
       entity_id:
         - sensor.date__time
+        - sensor.temperatura_ambiente
       value_template: >-
         {{ ((as_timestamp(now()) - as_timestamp(states.sensor.temperatura_ambiente.last_changed)) > 60) }}
 ###########
