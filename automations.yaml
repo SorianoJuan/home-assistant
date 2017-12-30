@@ -24,6 +24,20 @@
       title: "Control de hidroponia OFFLINE"
       message: "Se ha detenido el control de hidroponia"
 
+- id: sensor_offline
+  alias: Sensor offline
+  trigger:
+    - platform: state
+      entity_id: 
+        - binary_sensor.temp_online_timeout
+        - binary_sensor.hum_online_timeout
+      to: "off"
+  action:
+    - service: notify.mypushbullet
+      data:
+        title: "Un nodo se ha desconectado"
+        message: "Un nodo no se ha comunicado por más de 60 segundos"
+
 ##Hiding automations
 #- id: hide_manual_automatic
 #  alias: Hide automatic

@@ -22,12 +22,12 @@
         {{ (states('sensor.temperatura_ambiente')|float > states('input_number.temp_max')|float) 
         and (states('input_number.temp_min')|float <= states('input_number.temp_max')|float) }}
 #Online
-    temp_offline_timeout:
+    temp_online_timeout:
       entity_id:
         - sensor.date__time
         - sensor.temperatura_ambiente
       value_template: >-
-        {{ ((as_timestamp(now()) - as_timestamp(states.sensor.temperatura_ambiente.last_changed)) > 60) }}
+        {{ ((as_timestamp(now()) - as_timestamp(states.sensor.temperatura_ambiente.last_changed)) < 60) }}
 ###########
 #Humedad
 ###########
@@ -49,3 +49,10 @@
       value_template: >-
         {{ (states('sensor.humedad_ambiente')|float > states('input_number.humedad_max')|float) 
         and (states('input_number.humedad_min')|float <= states('input_number.humedad_max')|float) }}
+#Online
+    hum_online_timeout:
+      entity_id:
+        - sensor.date__time
+        - sensor.humedad_ambiente
+      value_template: >-
+        {{ ((as_timestamp(now()) - as_timestamp(states.sensor.humedad_ambiente.last_changed)) < 60) }}
