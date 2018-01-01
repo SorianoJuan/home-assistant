@@ -8,7 +8,7 @@ control_temperatura:
   initial: on
   icon: mdi:thermometer
 #Mostrar u ocultar gráficos
-show_hide_graphs:
+show_hide_graphs_invernadero:
   name: Ver Gráfs. Invernadero
   initial: off
   icon: mdi:chart-line-variant
@@ -24,6 +24,12 @@ control_planta1_ec:
   name: Control automático de C.E.
   initial: on
   icon: mdi:flash-circle
+#Mostrar u ocultar gráficos
+show_hide_graphs_planta1:
+  name: Ver Gráfs. Planta 1
+  initial: off
+  icon: mdi:chart-line-variant
+#-----------
 #Planta2
 control_planta2_ph:
   name: Control automático de pH
@@ -33,6 +39,12 @@ control_planta2_ec:
   name: Control automático de C.E.
   initial: on
   icon: mdi:flash-circle
+#Mostrar u ocultar gráficos
+show_hide_graphs_planta2:
+  name: Ver Gráfs. Planta 2
+  initial: off
+  icon: mdi:chart-line-variant
+#-----------
 #Planta3
 control_planta3_ph:
   name: Control automático de pH
@@ -42,4 +54,9 @@ control_planta3_ec:
   name: Control automático de C.E.
   initial: on
   icon: mdi:flash-circle
+#Mostrar u ocultar gráficos
+show_hide_graphs_planta3:
+  name: Ver Gráfs. Planta 3
+  initial: off
+  icon: mdi:chart-line-variant
 

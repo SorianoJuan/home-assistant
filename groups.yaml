@@ -21,36 +21,37 @@ invernadero_view:
   name: Invernadero
   entities:
     - group.sensores_invernadero
-    - group.graficos_invernadero
     - group.estufas
     - group.humidificadores
     - group.ventanas
     - group.ventiladores
     - group.bombas
+    - input_boolean.show_hide_graphs_invernadero
+    - group.graficos_invernadero
 
 planta_1_view:
   view: yes
   name: Planta 1
   entities:
     - group.sensores_planta1
-    - history_graph.conductividad_electrica_planta_1
-    - history_graph.ph_planta_1
+    - input_boolean.show_hide_graphs_planta1
+    - group.graficos_planta1
 
 planta_2_view:
   view: yes
   name: Planta 2
   entities:
     - group.sensores_planta2
-    - history_graph.conductividad_electrica_planta_2
-    - history_graph.ph_planta_2
+    - input_boolean.show_hide_graphs_planta2
+    - group.graficos_planta2
 
 planta_3_view:
   view: yes
   name: Planta 3
   entities:
     - group.sensores_planta3
-    - history_graph.conductividad_electrica_planta_3
-    - history_graph.ph_planta_3
+    - input_boolean.show_hide_graphs_planta3
+    - group.graficos_planta3
 
 control_view:
   view: yes
@@ -204,17 +205,35 @@ sensores_planta1:
     - sensor.ph__planta_1
     - sensor.conductividad_electrica__planta_1
 
+graficos_planta1:
+  name: Gráficos Planta 1
+  entities:
+    - history_graph.conductividad_electrica_planta_1
+    - history_graph.ph_planta_1
+
 sensores_planta2:
   name: Sensores planta 2
   entities:
     - sensor.ph__planta_2
     - sensor.conductividad_electrica__planta_2
 
+graficos_planta2:
+  name: Gráficos Planta 2
+  entities:
+    - history_graph.conductividad_electrica_planta_2
+    - history_graph.ph_planta_2
+
 sensores_planta3:
   name: Sensores planta 3
   entities:
     - sensor.ph__planta_3
-    - sensor.conductividad_electrica__planta_3 
+    - sensor.conductividad_electrica__planta_3
+
+graficos_planta3:
+  name: Gráficos Planta 3
+  entities:
+    - history_graph.conductividad_electrica_planta_3
+    - history_graph.ph_planta_3
 
 #################
 #ETC

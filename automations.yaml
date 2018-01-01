@@ -112,13 +112,15 @@
 #SHOW/HIDE
 ##################
 
-
-#Hiding automations
+############
+#INVERNADERO
+############
+#Hide
 - id: hide_invernadero_graphs
   alias: Hide Invernadero Graphs
   trigger:
     - platform: state
-      entity_id: input_boolean.show_hide_graphs
+      entity_id: input_boolean.show_hide_graphs_invernadero
       to: "off"
   action:
     service: group.set_visibility
@@ -126,12 +128,12 @@
       - group.graficos_invernadero
     data:
       visible: False
-#Showing automations
+#Show
 - id: show_invernadero_graphs
   alias: Show Invernadero Graphs
   trigger:
     - platform: state
-      entity_id: input_boolean.show_hide_graphs
+      entity_id: input_boolean.show_hide_graphs_invernadero
       to: "on"
   action:
     service: group.set_visibility
@@ -139,3 +141,35 @@
       - group.graficos_invernadero
     data:
       visible: True
+############
+#PLANTAS
+############
+#Planta1
+#Hide
+- id: hide_planta1_graphs
+  alias: Hide Planta1 Graphs
+  trigger:
+    - platform: state
+      entity_id: input_boolean.show_hide_graphs_invernadero
+      to: "off"
+  action:
+    service: group.set_visibility
+    entity_id: 
+      - group.graficos_invernadero
+    data:
+      visible: False
+#Show
+- id: show_invernadero_graphs
+  alias: Show Invernadero Graphs
+  trigger:
+    - platform: state
+      entity_id: input_boolean.show_hide_graphs_invernadero
+      to: "on"
+  action:
+    service: group.set_visibility
+    entity_id: 
+      - group.graficos_invernadero
+    data:
+      visible: True
+#-----------
+#Planta2
