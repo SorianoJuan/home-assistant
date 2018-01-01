@@ -16,3 +16,5 @@
   icon: mdi:water-percent
 "*threshold*":
   hidden: yes
+"*online_timeout*":
+  icon: mdi:lan-connect
