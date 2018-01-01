@@ -122,6 +122,13 @@
       data_template:
         title: "La temperatura ambiente descendió del mínimo establecido: {{ states.input_number.temp_min.state }}%"
         message: "La temperatura ambiente es de: {{ states.sensor.temperatura_ambiente.state }}°C, prendiendo estufas"
+    #Prender estufas_gral
+    - service: mqtt.publish
+      data:
+        topic: "invernadero/estufas_gral/switch/set"
+        payload: "on"
+        qos: 1
+    #Prender estufas 1 por 1
     - service: mqtt.publish
       data:
         topic: "invernadero/estufa1/switch/set"
