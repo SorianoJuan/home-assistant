@@ -71,6 +71,7 @@ otros_view:
     - group.date_time
     - group.sun
     - group.pronostico
+    - group.estado_nodos
 
 dev_view:
   view: yes
