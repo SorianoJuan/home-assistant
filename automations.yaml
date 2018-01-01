@@ -150,26 +150,80 @@
   alias: Hide Planta1 Graphs
   trigger:
     - platform: state
-      entity_id: input_boolean.show_hide_graphs_invernadero
+      entity_id: input_boolean.show_hide_graphs_planta1
       to: "off"
   action:
     service: group.set_visibility
     entity_id: 
-      - group.graficos_invernadero
+      - group.graficos_planta1
     data:
       visible: False
 #Show
-- id: show_invernadero_graphs
-  alias: Show Invernadero Graphs
+- id: show_planta1_graphs
+  alias: Show Planta1 Graphs
   trigger:
     - platform: state
-      entity_id: input_boolean.show_hide_graphs_invernadero
+      entity_id: input_boolean.show_hide_graphs_planta1
       to: "on"
   action:
     service: group.set_visibility
     entity_id: 
-      - group.graficos_invernadero
+      - group.graficos_planta1
     data:
       visible: True
 #-----------
 #Planta2
+#Hide
+- id: hide_planta2_graphs
+  alias: Hide Planta2 Graphs
+  trigger:
+    - platform: state
+      entity_id: input_boolean.show_hide_graphs_planta2
+      to: "off"
+  action:
+    service: group.set_visibility
+    entity_id: 
+      - group.graficos_planta2
+    data:
+      visible: False
+#Show
+- id: show_planta2_graphs
+  alias: Show Planta2 Graphs
+  trigger:
+    - platform: state
+      entity_id: input_boolean.show_hide_graphs_planta2
+      to: "on"
+  action:
+    service: group.set_visibility
+    entity_id: 
+      - group.graficos_planta2
+    data:
+      visible: True
+#------------
+#Planta3
+#Hide
+- id: hide_planta3_graphs
+  alias: Hide Planta3 Graphs
+  trigger:
+    - platform: state
+      entity_id: input_boolean.show_hide_graphs_planta3
+      to: "off"
+  action:
+    service: group.set_visibility
+    entity_id: 
+      - group.graficos_planta3
+    data:
+      visible: False
+#Show
+- id: show_planta3_graphs
+  alias: Show Planta3 Graphs
+  trigger:
+    - platform: state
+      entity_id: input_boolean.show_hide_graphs_planta3
+      to: "on"
+  action:
+    service: group.set_visibility
+    entity_id: 
+      - group.graficos_planta3
+    data:
+      visible: True
