@@ -14,7 +14,7 @@
   icon: mdi:water-percent
 "sensor.humedad*":
   icon: mdi:water-percent
-#"*threshold*":
-#  hidden: yes
+"*threshold*":
+  hidden: yes
 "*online_timeout*":
   icon: mdi:lan-connect
