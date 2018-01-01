@@ -62,5 +62,10 @@ sensor.speedtest_ping:
   friendly_name: Ping
 sensor.speedtest_upload:
   friendly_name: Upload
-#Automatic/Manual view
+#Estado de nodos
+binary_sensor.temp_online_timeout:
+  friendly_name: Sensor de Temp
+binary_sensor.hum_online_timeout:
+  friendly_name: Sensor de Hum
+
 

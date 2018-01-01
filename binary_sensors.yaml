@@ -28,6 +28,7 @@
         - sensor.temperatura_ambiente
       value_template: >-
         {{ ((as_timestamp(now()) - as_timestamp(states.sensor.temperatura_ambiente.last_changed)) < 60) }}
+      device_class: connectivity
 ###########
 #Humedad
 ###########
@@ -56,3 +57,4 @@
         - sensor.humedad_ambiente
       value_template: >-
         {{ ((as_timestamp(now()) - as_timestamp(states.sensor.humedad_ambiente.last_changed)) < 60) }}
+      device_class: connectivity
