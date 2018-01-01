@@ -29,29 +29,46 @@ invernadero_view:
     - input_boolean.show_hide_graphs_invernadero
     - group.graficos_invernadero
 
-planta_1_view:
-  view: yes
-  name: Planta 1
+plantas_view:
+  view:yes
+  name: Plantas
   entities:
+    #Planta1
     - group.sensores_planta1
     - input_boolean.show_hide_graphs_planta1
     - group.graficos_planta1
-
-planta_2_view:
-  view: yes
-  name: Planta 2
-  entities:
+    #Planta2
     - group.sensores_planta2
     - input_boolean.show_hide_graphs_planta2
     - group.graficos_planta2
-
-planta_3_view:
-  view: yes
-  name: Planta 3
-  entities:
+    #Planta3
     - group.sensores_planta3
     - input_boolean.show_hide_graphs_planta3
     - group.graficos_planta3
+
+#planta_1_view:
+#  view: yes
+#  name: Planta 1
+#  entities:
+#    - group.sensores_planta1
+#    - input_boolean.show_hide_graphs_planta1
+#    - group.graficos_planta1
+#
+#planta_2_view:
+#  view: yes
+#  name: Planta 2
+#  entities:
+#    - group.sensores_planta2
+#    - input_boolean.show_hide_graphs_planta2
+#    - group.graficos_planta2
+#
+#planta_3_view:
+#  view: yes
+#  name: Planta 3
+#  entities:
+#    - group.sensores_planta3
+#    - input_boolean.show_hide_graphs_planta3
+#    - group.graficos_planta3
 
 control_view:
   view: yes
