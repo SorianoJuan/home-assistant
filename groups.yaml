@@ -30,7 +30,7 @@ invernadero_view:
     - group.graficos_invernadero
 
 plantas_view:
-  view:yes
+  view: yes
   name: Plantas
   entities:
     #Planta1
