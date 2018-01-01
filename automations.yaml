@@ -1,5 +1,5 @@
 #######################
-#Alertas homeassistant
+#ALERTAS
 #######################
 
 - id: homeassistant_on
@@ -36,11 +36,7 @@
     - service: notify.mypushbullet
       data_template:
         title: "Un nodo se ha desconectado"
-        message: "No se han recibido actualizaciones de un nodo por más de 60 segundos"
-    - service: mqtt.publish
-      data:
-        topic: "nodos"
-        payload: "on"
+        message: "No se han recibido actualizaciones de un nodo por más del tiempo establecido"
 
 
 ###################
@@ -71,6 +67,7 @@
       data:
         topic: "invernadero/humidificador/switch/set"
         payload: "on"
+        qos: 1
 #SUPERIOR AL MAX
 - id: humedad_sup
   alias: Humedad > Max
@@ -96,6 +93,114 @@
       data:
         topic: "invernadero/humidificador/switch/set"
         payload: "off"
+        qos: 1
+
+#############
+#TEMPERATURA
+#############
+#INFERIOR AL MIN
+- id: temperatura_inf
+  alias: Temperatura < Min
+  trigger:
+    #Se descendió del mínimo ingresado
+    - platform: state
+      entity_id: binary_sensor.temp_threshold_min
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      #Están apagadas las estufas
+      - condition: state
+        entity_id: switch.switch.estufa_1
+        state: 'off'
+      #Está activado el control automático de temperatura
+      - condition: state
+        entity_id: input_boolean.control_temperatura
+        state: "on"
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: "La temperatura ambiente descendió del mínimo establecido: {{ states.input_number.temp_min.state }}%"
+        message: "La temperatura ambiente es de: {{ states.sensor.temperatura_ambiente.state }}°C, prendiendo estufas"
+    - service: mqtt.publish
+      data:
+        topic: "invernadero/estufa1/switch/set"
+        payload: "on"
+        qos: 1
+#SUPERIOR AL MAX
+- id: temperatura_sup
+  alias: Temperatura > Max
+  trigger:
+    #Se superó el máximo ingresado
+    - platform: state
+      entity_id: binary_sensor.temp_threshold_max
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      #Están cerradas las ventanas
+      - condition: state
+        entity_id: switch.switch.ventana_1
+        state: 'off'
+      - condition: state
+        entity_id: switch.switch.ventana_2
+        state: 'off'
+      - condition: state
+        entity_id: switch.switch.ventana_3
+        state: 'off'
+      - condition: state
+        entity_id: switch.switch.ventana_4
+        state: 'off'
+      #Está activado el control automático de temperatura
+      - condition: state
+        entity_id: input_boolean.control_temperatura
+        state: "on"
+  action:
+    - service: notify.mypushbullet
+      data_template:
+        title: "La temperatura ambiente superó el máximo establecido: {{ states.input_number.temp_max.state }}%"
+        message: "La temperatura ambiente es de: {{ states.sensor.temperatura_ambiente.state }}°C, abriendo ventanas"
+      #Abrir ventanas_gral
+    - service: mqtt.publish
+      data:
+        topic: "invernadero/ventanas_gral/switch/set"
+        payload: "on"
+        qos: 1
+      #Abrir ventana 1 por 1
+    - service: mqtt.publish
+      data:
+        topic: "invernadero/ventana1/switch/set"
+        payload: "on"
+        qos: 1
+    - service: mqtt.publish
+      data:
+        topic: "invernadero/ventana2/switch/set"
+        payload: "on"
+        qos: 1
+    - service: mqtt.publish
+      data:
+        topic: "invernadero/ventana3/switch/set"
+        payload: "on"
+        qos: 1
+    - service: mqtt.publish
+      data:
+        topic: "invernadero/ventana4/switch/set"
+        payload: "on"
+        qos: 1
+
+
+
+
+
+
+
+
+
+
+
+##############
+# ETC
+##############
 
 - id: travis_automation
   alias: 'Update if Travis=passed'
@@ -107,10 +212,11 @@
     - service: script.update_config
 
 
-
+############################
 ##################
 #SHOW/HIDE
 ##################
+############################
 
 ############
 #INVERNADERO
