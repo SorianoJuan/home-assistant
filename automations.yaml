@@ -111,7 +111,7 @@
     conditions:
       #Están apagadas las estufas
       - condition: state
-        entity_id: switch.switch.estufa_1
+        entity_id: switch.estufa_1
         state: 'off'
       #Está activado el control automático de temperatura
       - condition: state
@@ -147,16 +147,16 @@
     conditions:
       #Están cerradas las ventanas
       - condition: state
-        entity_id: switch.switch.ventana_1
+        entity_id: switch.ventana_1
         state: 'off'
       - condition: state
-        entity_id: switch.switch.ventana_2
+        entity_id: switch.ventana_2
         state: 'off'
       - condition: state
-        entity_id: switch.switch.ventana_3
+        entity_id: switch.ventana_3
         state: 'off'
       - condition: state
-        entity_id: switch.switch.ventana_4
+        entity_id: switch.ventana_4
         state: 'off'
       #Está activado el control automático de temperatura
       - condition: state
