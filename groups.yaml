@@ -2,19 +2,19 @@
 #Views
 ############
 
-#default_view:
-#  view: yes
-#  name: Vista general
-#  entities:
-#    - group.sensores_invernadero
-#    - group.sensores_planta1
-#    - group.sensores_planta2
-#    - group.sensores_planta3
-#    - group.bombas
-#    - group.estufas
-#    - group.humidificadores
-#    - group.ventanas
-#    - group.ventiladores
+default_view:
+  view: yes
+  name: Vista general
+  entities:
+    - group.sensores_invernadero
+    - group.sensores_planta1
+    - group.sensores_planta2
+    - group.sensores_planta3
+    - group.bombas
+    - group.estufas
+    - group.humidificadores
+    - group.ventanas
+    - group.ventiladores
 
 invernadero_view: 
   view: yes
@@ -238,6 +238,14 @@ graficos_planta3:
 #################
 #ETC
 #################
+
+#Estado de los nodos
+estado_nodos:
+  name: Estado de los nodos
+  entities:
+    - binary_sensor.temp_online_timeout
+    - binary_sensor.hum_online_timeout
+
 
 #Pronostico
 pronostico:

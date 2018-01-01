@@ -10,7 +10,7 @@ control_temperatura:
 #Mostrar u ocultar gráficos
 show_hide_graphs_invernadero:
   name: Ver Gráfs. Invernadero
-  initial: off
+  initial: on
   icon: mdi:chart-line-variant
 ##########
 #PLANTAS
@@ -27,7 +27,7 @@ control_planta1_ec:
 #Mostrar u ocultar gráficos
 show_hide_graphs_planta1:
   name: Ver Gráfs. Planta 1
-  initial: off
+  initial: on
   icon: mdi:chart-line-variant
 #-----------
 #Planta2
@@ -42,7 +42,7 @@ control_planta2_ec:
 #Mostrar u ocultar gráficos
 show_hide_graphs_planta2:
   name: Ver Gráfs. Planta 2
-  initial: off
+  initial: on
   icon: mdi:chart-line-variant
 #-----------
 #Planta3
@@ -57,6 +57,6 @@ control_planta3_ec:
 #Mostrar u ocultar gráficos
 show_hide_graphs_planta3:
   name: Ver Gráfs. Planta 3
-  initial: off
+  initial: on
   icon: mdi:chart-line-variant
 
