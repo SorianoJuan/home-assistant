@@ -107,48 +107,35 @@
     - service: script.update_config
 
 
-#- id: nodemcu_online
-#  alias: NodeMCU online
-#  trigger:
-#    platform: mqtt
-#    topic: status/nodemcu
-#    payload: online
-#  action:
-#    service: notify.mypushbullet
-#    data_template:
-#      title: "NodeMCU online"
-#      message: "Se conecto el NodeMCU"
+
+##################
+#SHOW/HIDE
+##################
 
 
-##Hiding automations
-#- id: hide_manual_automatic
-#  alias: Hide automatic
-#  trigger:
-#    - platform: state
-#      entity_id: input_boolean.control_humedad
-#      to: "off"
-#  action:
-#    service: group.set_visibility
-#    entity_id: 
-#      - group.invernadero_automations
-#      - group.planta1_automations
-#      - group.planta2_automations
-#      - group.planta3_automations
-#    data:
-#      visible: False
-##Showing automations
-#- id: show_manual_automatic
-#  alias: Show automatic
-#  trigger:
-#    - platform: state
-#      entity_id: input_select.manual_or_automatic
-#      to: "Automático"
-#  action:
-#    service: group.set_visibility
-#    entity_id: 
-#      - group.invernadero_automations
-#      - group.planta1_automations
-#      - group.planta2_automations
-#      - group.planta3_automations
-#    data:
-#      visible: True
+#Hiding automations
+- id: hide_invernadero_graphs
+  alias: Hide Invernadero Graphs
+  trigger:
+    - platform: state
+      entity_id: input_boolean.show_hide_graphs
+      to: "off"
+  action:
+    service: group.set_visibility
+    entity_id: 
+      - group.graficos_invernadero
+    data:
+      visible: False
+#Showing automations
+- id: show_invernadero_graphs
+  alias: Show Invernadero Graphs
+  trigger:
+    - platform: state
+      entity_id: input_boolean.show_hide_graphs
+      to: "on"
+  action:
+    service: group.set_visibility
+    entity_id: 
+      - group.graficos_invernadero
+    data:
+      visible: True

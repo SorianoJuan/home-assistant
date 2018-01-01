@@ -7,6 +7,14 @@ control_temperatura:
   name: Control automático de Temp
   initial: on
   icon: mdi:thermometer
+#Mostrar u ocultar gráficos
+show_hide_graphs:
+  name: Ver Gráfs. Invernadero
+  initial: off
+  icon: mdi:chart-line-variant
+##########
+#PLANTAS
+##########
 #Planta1
 control_planta1_ph:
   name: Control automático de pH

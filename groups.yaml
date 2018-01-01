@@ -21,8 +21,7 @@ invernadero_view:
   name: Invernadero
   entities:
     - group.sensores_invernadero
-    - history_graph.temperatura_ambiente
-    - history_graph.humedad_ambiente
+    - group.graficos_invernadero
     - group.estufas
     - group.humidificadores
     - group.ventanas
@@ -150,6 +149,12 @@ sensores_invernadero:
   entities:
     - sensor.temperatura_ambiente
     - sensor.humedad_ambiente
+
+graficos_invernadero:
+  name: Gráficos invernadero
+  entities:
+    - history_graph.temperatura_ambiente
+    - history_graph.humedad_ambiente
 
 ventanas:
   name: Ventanas
