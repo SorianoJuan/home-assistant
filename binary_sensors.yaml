@@ -27,7 +27,7 @@
         - sensor.date__time
         - sensor.temperatura_ambiente
       value_template: >-
-        {{ ((as_timestamp(now()) - as_timestamp(states.sensor.temperatura_ambiente.last_changed)) < 60) }}
+        {{ ((as_timestamp(now()) - as_timestamp(states.sensor.temperatura_ambiente.last_changed)) < 300) }}
 ###########
 #Humedad
 ###########
@@ -55,4 +55,4 @@
         - sensor.date__time
         - sensor.humedad_ambiente
       value_template: >-
-        {{ ((as_timestamp(now()) - as_timestamp(states.sensor.humedad_ambiente.last_changed)) < 60) }}
+        {{ ((as_timestamp(now()) - as_timestamp(states.sensor.humedad_ambiente.last_changed)) < 300) }}
