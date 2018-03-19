@@ -25,9 +25,8 @@ mqtt:
 http:
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
-  # @codingStandardsIgnoreLine
-  ssl_certificate: /etc/letsencrypt/live/mavrichidroponia.duckdns.org/fullchain.pem # @codingStandardsIgnoreLine
-  ssl_key: /etc/letsencrypt/live/mavrichidroponia.duckdns.org/privkey.pem           # @codingStandardsIgnoreLine
+  ssl_certificate: !secret ssl_path
+  ssl_key: !secret ssl_key          
 #############################
 #         INCLUDES
 #############################
