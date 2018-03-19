@@ -7,7 +7,7 @@ homeassistant:
   time_zone: America/Buenos_Aires
   customize: !include customize.yaml
   customize_glob: !include customize_glob.yaml
-#14
+  
 zone:
   name: Centro
   latitude: !secret latitud_centro
@@ -79,7 +79,7 @@ history:
 # View all events in a logbook
 logbook:
 # Enables a map showing the location of tracked devices
-map:
+#map:
 # Track the sun
 sun:
 # Text to speech
