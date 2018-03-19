@@ -4,5 +4,6 @@
 !.gitignore
 !.travis.yml
 !/shellscripts/
+!*.pem
 secrets.yaml
 known_devices.yaml
