@@ -7,7 +7,7 @@ homeassistant:
   time_zone: America/Buenos_Aires
   customize: !include customize.yaml
   customize_glob: !include customize_glob.yaml
-#
+
 zone:
   name: Centro
   latitude: !secret latitud_centro
